@@ -7,9 +7,17 @@ body {
   margin: 0 auto;
   background: $primary;
   font-family: 'Montserrat', serif;
-  font-size: 32px;
 
-  @media screen and (max-width: $md) {
-    font-size: 28px;
+  @media screen and (min-width: $xs) {
+    font-size: 22px;
   }
+
+  @media only screen and (min-width: $sm) {
+    font-size: 26px;
+  }
+
+  @media only screen and (min-width: $md) {
+    font-size: 32px;
+  }
+
 }
