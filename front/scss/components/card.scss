@@ -1,0 +1,22 @@
+.card-links {
+  box-shadow: 0 2px 8px 0 rgba(209,209,209,1);
+  padding: 1em;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.active {
+    border-bottom: 5px solid #db8402;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card-text:hover {
+  transform: scale(1.05);
+  transition: .5s ease;
+}

@@ -1,11 +1,13 @@
 @import "settings/settings";
+@import "elements/elements";
 @import "objects/layout";
+@import "components/components";
 @import "utilities/utilities.scss";
 
 
 body {
   margin: 0 auto;
-  background: $primary;
+  background: $white;
   font-family: 'Montserrat', serif;
 
   @media screen and (min-width: $xs) {

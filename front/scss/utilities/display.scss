@@ -1,0 +1,17 @@
+.d {
+  &-flex {
+    display: flex;
+  }
+}
+
+.j-con {
+  &__center {
+    justify-content: center;
+  }
+}
+
+.a-ite {
+  &__center {
+    align-items: center;
+  }
+}
