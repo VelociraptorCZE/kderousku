@@ -14,10 +14,13 @@
     "build:js": "parcel build front/js/*.js --no-source-maps -d public/dist/js/ --public-url ./"
   },
   "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "vue": "2.6.11"
+    "vue": "^2.6.12",
+    "vue-hot-reload-api": "^2.3.4"
   }
 }
