@@ -32,27 +32,31 @@
 						id: 1,
 						name: "MHD",
 						image: "public/img/mhd.svg",
-						info: "Ministerstvo zdravotnictví dnes vydalo mimořádná opatření k pravidlům pro nošení roušek, karanténu a hromadné akce s účinností od 1. září. Roušky budou povinné, jak už ministerstvo oznámilo dříve, ve zdravotnických a sociálních zařízeních, úřadech, prostředcích veřejné dopravy a volebních místnostech. Od 1. září se také zkrátí izolace pro lidi s pozitivním testem na covid-19 a karanténa pro ty, kteří se s nimi dostali do kontaktu, ze 14 na deset dní."
+						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 					},
 					{
 						id: 2,
 						name: "MHD",
-						image: "public/img/mhd.svg"
+						image: "public/img/mhd.svg",
+						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 					},
 					{
 						id: 3,
 						name: "MHD",
-						image: "public/img/mhd.svg"
+						image: "public/img/mhd.svg",
+						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 					},
 					{
 						id: 4,
 						name: "MHD",
-						image: "public/img/mhd.svg"
+						image: "public/img/mhd.svg",
+						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 					},
 					{
 						id: 5,
 						name: "MHD",
-						image: "public/img/mhd.svg"
+						image: "public/img/mhd.svg",
+						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 					}
 				]
 			}
