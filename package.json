@@ -7,11 +7,17 @@
   "private": true,
   "license": "proprietary",
   "scripts": {
-    "dev": "parcel watch front/scss/*.scss --no-source-maps -d public/dist/css/ --no-hmr --public-url ./",
-    "build": "parcel build front/scss/*.scss --no-source-maps -d public/dist/css/ --public-url ./"
+    "build": "npm run build:css && npm run build:js",
+    "dev:css": "parcel watch front/scss/*.scss --no-source-maps -d public/dist/css/ --no-hmr --public-url ./",
+    "build:css": "parcel build front/scss/*.scss --no-source-maps -d public/dist/css/ --public-url ./",
+    "dev:js": "parcel watch front/js/*.js --no-source-maps -d public/dist/js/",
+    "build:js": "parcel build front/js/*.js --no-source-maps -d public/dist/js/ --public-url ./"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "vue": "2.6.11"
   }
 }
