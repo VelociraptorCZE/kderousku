@@ -6,6 +6,14 @@
   color: #fff;
 }
 
+.tc {
+  text-align: center;
+}
+
+.t-w {
+  color: #fff;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -46,16 +54,13 @@
   margin: 1.25rem;
 }
 
-.tc {
-  text-align: center;
-}
-
-.t-w {
-  color: #fff;
-}
-
 body {
   margin: 0 auto;
   background: #346AF8;
   font-family: "Montserrat", serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 32px;
+  }
 }
