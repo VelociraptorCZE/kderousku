@@ -7,7 +7,8 @@
   "private": true,
   "license": "proprietary",
   "scripts": {
-    "dev": "parcel watch front/scss/*.scss --no-source-maps -d public/dist/css/ --no-hmr --public-url ./"
+    "dev": "parcel watch front/scss/*.scss --no-source-maps -d public/dist/css/ --no-hmr --public-url ./",
+    "build": "parcel build front/scss/*.scss --no-source-maps -d public/dist/css/ --no-hmr --public-url ./"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
