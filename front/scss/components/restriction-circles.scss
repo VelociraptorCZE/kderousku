@@ -1,7 +1,18 @@
 .restriction-circles {
   background: $primary;
-  padding: 3rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 25%;
+    max-width: 50%;
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 }
