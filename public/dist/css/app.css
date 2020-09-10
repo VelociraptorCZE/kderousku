@@ -63,12 +63,37 @@
 }
 
 .dynamic-tabs {
-  width: 100%;
   margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+}
+.dynamic-tabs > div {
+  border-bottom: 4px solid #0b9ef3;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin: 0.5em;
+  width: fit-content;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .dynamic-tabs {
     width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dynamic-tabs {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dynamic-tabs {
+    font-size: 1.1em;
   }
 }
 
@@ -92,6 +117,7 @@
   text-align: center;
   overflow: hidden;
   margin: auto;
+  width: 100%;
 }
 
 .option-container {
@@ -171,7 +197,7 @@
   transform: translateX(0%);
 }
 .option-input:checked ~ .option .option__label {
-  transform: translateX(40%) scale(0.7);
+  transform: translateX(40%) scale(0.5);
 }
 
 .option-input:first-child:checked ~ .option {
@@ -412,7 +438,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #ddeeff;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;

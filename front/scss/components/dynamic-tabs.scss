@@ -1,8 +1,32 @@
 .dynamic-tabs {
-  width: 100%;
   margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+
+  > div {
+    border-bottom: 4px solid #0b9ef3;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin: .5em;
+    width: fit-content;
+    cursor: pointer;
+  }
 
   @media screen and (min-width: $lg) {
     width: 60%;
+  }
+
+  @media screen and (max-width: $md) {
+    font-size: 1.5em;
+  }
+
+  @media screen and (max-width: $sm) {
+    font-size: 1.1em;
   }
 }

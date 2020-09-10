@@ -2,6 +2,7 @@
   text-align: center;
   overflow: hidden;
   margin: auto;
+  width: 100%;
 }
 
 .option-container {
@@ -81,7 +82,7 @@
 .option-input:checked ~ .option {
   transform: translateX(-30%) translateX(0.2em);
   .option__indicator { transform: translateX(0%); }
-  .option__label { transform: translateX(40%) scale(0.7); }
+  .option__label { transform: translateX(40%) scale(0.5); }
 }
 
 .option-input:first-child:checked ~ .option {
