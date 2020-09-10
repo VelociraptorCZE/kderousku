@@ -46,7 +46,6 @@
 .card-links {
   width: 50%;
   margin: auto;
-  border-radius: 25px;
 }
 @media screen and (max-width: 768px) {
   .card-links {
@@ -54,16 +53,25 @@
   }
 }
 
-.active {
-  border-bottom: 5px solid #db8402;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+.header {
+  letter-spacing: 0.1em;
 }
 
-.card-text:hover {
-  transform: scale(1.05);
-  transition: 0.5s ease;
-  text-align: center;
+.select {
+  border: 1px solid #e27e31;
+  margin: auto;
+  width: 15em;
+  height: 3em;
+  line-height: 2;
+  background: #fff;
+  font-size: 1.1em;
+  padding: 0 0.7em;
+  cursor: pointer;
+  border-radius: 0.35em;
+}
+
+.select:hover {
+  background: #f3f3f3;
 }
 
 .option-group {
@@ -218,10 +226,6 @@
   color: #fff;
 }
 
-.activee {
-  background-image: linear-gradient(0deg, transparent 0.1em, #de7e17 0px, #da7b16 0.26em, transparent 0px, transparent 100%);
-}
-
 .p-1 {
   padding: 0.25rem;
 }
@@ -322,10 +326,6 @@
 
 .t-w {
   color: #fff;
-}
-
-.activee {
-  background-image: linear-gradient(0deg, transparent 0.1em, #de7e17 0px, #da7b16 0.26em, transparent 0px, transparent 100%);
 }
 
 .p-1 {

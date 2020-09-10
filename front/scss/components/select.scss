@@ -1,0 +1,16 @@
+.select {
+  border: 1px solid #e27e31;
+  margin: auto;
+  width: 15em;
+  height: 3em;
+  line-height: 2;
+  background: $white;
+  font-size: 1.1em;
+  padding: 0 .7em;
+  cursor: pointer;
+  border-radius: .35em;
+}
+
+.select:hover {
+  background: $grey-extra-light;
+}

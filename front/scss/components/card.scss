@@ -1,21 +1,12 @@
 .card-links {
   width: 50%;
   margin: auto;
-  border-radius: 25px;
 
   @media screen and (max-width: $md) {
     width: 80%;
   }
 }
 
-.active {
-    border-bottom: 5px solid #db8402;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.card-text:hover {
-  transform: scale(1.05);
-  transition: .5s ease;
-  text-align: center;
+.header {
+  letter-spacing: .1em;
 }

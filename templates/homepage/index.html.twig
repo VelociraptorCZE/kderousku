@@ -5,7 +5,7 @@
 {% block body %}
 
     <div class="container-header mb-5">
-        <h1 class="tc">Kde musím nosit roušku?</h1>
+        <h1 class="tc header">Kde musím nosit roušku?</h1>
         <div class="card-links">
             <div class="option-group">
                 <div class="option-container">
@@ -15,16 +15,12 @@
 
                     <label class="option" for="option-1">
                         <span class="option__indicator"></span>
-                        <span class="option__label">
-        Aktuální opatření
-      </span>
+                        <span class="option__label">Aktuální opatření</span>
                     </label>
 
                     <label class="option" for="option-2">
                         <span class="option__indicator"></span>
-                        <span class="option__label">
-        Nadcházející opatření
-      </span>
+                        <span class="option__label">Nadcházející opatření</span>
                     </label>
 
                 </div>
@@ -33,5 +29,15 @@
     </div>
 
     <div id="circles"></div>
+
+    <div class="container-header tc">
+        <h2>Kraje</h2>
+        <select class="select">
+            <option selected disabled>Vyberte kraj</option>
+            <option value="1">Praha</option>
+            <option value="2">Moravskoslezky</option>
+            <option value="3">Atd</option>
+        </select>
+    </div>
 
 {% endblock %}
