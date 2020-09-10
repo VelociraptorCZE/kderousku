@@ -43,18 +43,14 @@
   margin: 0 auto;
 }
 
-.card-links {
+.dynamic-tabs {
   width: 50%;
   margin: auto;
 }
 @media screen and (max-width: 768px) {
-  .card-links {
+  .dynamic-tabs {
     width: 80%;
   }
-}
-
-.header {
-  letter-spacing: 0.1em;
 }
 
 .select {

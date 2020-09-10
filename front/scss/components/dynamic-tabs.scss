@@ -1,12 +1,8 @@
-.card-links {
+.dynamic-tabs {
   width: 50%;
   margin: auto;
 
   @media screen and (max-width: $md) {
     width: 80%;
   }
-}
-
-.header {
-  letter-spacing: .1em;
 }
