@@ -52,8 +52,10 @@
 }
 
 .container-cards {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .map {
@@ -88,12 +90,13 @@
 }
 @media screen and (min-width: 992px) {
   .dynamic-tabs {
-    width: 60%;
+    width: 70%;
   }
 }
 @media screen and (max-width: 768px) {
   .dynamic-tabs {
     font-size: 1.5em;
+    width: 80%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -105,20 +108,24 @@
 .card {
   background: #fff;
   box-shadow: 0 2px 8px 0 #d1d1d1;
+  max-width: 768px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 .card__left {
   width: 20%;
   background: #7d8088;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0.5em;
 }
 .card__right {
   width: 80%;
