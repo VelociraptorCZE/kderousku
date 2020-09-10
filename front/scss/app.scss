@@ -2,24 +2,12 @@
 @import "elements/elements";
 @import "objects/layout";
 @import "components/components";
-@import "utilities/utilities.scss";
-
+@import "utilities/utilities";
+@import "utilities/utilities";
 
 body {
-  margin: 0 auto;
-  background: $white;
-  font-family: 'Montserrat', serif;
-
-  @media screen and (min-width: $xs) {
-    font-size: 22px;
-  }
-
-  @media only screen and (min-width: $sm) {
-    font-size: 26px;
-  }
-
-  @media only screen and (min-width: $md) {
-    font-size: 32px;
-  }
-
+  background: $grey-extra-light;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }

@@ -1,13 +1,11 @@
 .card-links {
-  box-shadow: 0 2px 8px 0 rgba(209,209,209,1);
-  padding: 1em;
-  width: 70%;
+  width: 50%;
   margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
+  border-radius: 25px;
+
+  @media screen and (max-width: $md) {
+    width: 80%;
+  }
 }
 
 .active {
@@ -19,4 +17,5 @@
 .card-text:hover {
   transform: scale(1.05);
   transition: .5s ease;
+  text-align: center;
 }

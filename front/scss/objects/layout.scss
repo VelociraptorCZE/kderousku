@@ -1,12 +1,6 @@
-.container {
+@import "../components/restriction-circles";
+
+.container-header {
   width: 90%;
   margin: 0 auto;
-}
-
-.container-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: $white;
 }

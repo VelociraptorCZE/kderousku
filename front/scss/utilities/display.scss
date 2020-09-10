@@ -1,6 +1,14 @@
+.float-left {
+  float: left;
+}
+
 .d {
   &-flex {
     display: flex;
+  }
+
+  &-block {
+    display: block;
   }
 }
 

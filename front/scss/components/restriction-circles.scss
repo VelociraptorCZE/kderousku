@@ -1,0 +1,39 @@
+.restriction-circles {
+  background: $primary;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 25%;
+    max-width: 240px;
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 2rem 0 0;
+    border-radius: 1rem;
+
+    &--header {
+      transform: translateY(-4rem);
+      background: rgba(40, 65, 83, .9);
+      align-self: center;
+      width: fit-content;
+      padding: .15rem 1.5rem;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      background: lighten($primary, 2.5%);
+      transform: translateY(-3px);
+      transition: .5s;
+    }
+
+    &.active {
+      background: lighten($primary, 5%);
+    }
+  }
+}
