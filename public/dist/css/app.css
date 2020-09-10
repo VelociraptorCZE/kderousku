@@ -42,15 +42,22 @@
   width: 90%;
   margin: 0 auto;
   padding: 1em;
+  min-height: 30vh;
+}
+.container-header__bg-mask img {
+  position: absolute;
+  right: 0;
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .dynamic-tabs {
   width: 50%;
   margin: auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .dynamic-tabs {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -80,13 +87,11 @@
 .option-container {
   display: flex;
   height: 100%;
-  margin: 0 -10%;
 }
 
 .option {
   overflow: hidden;
   padding: 0.5em;
-  background: #fff;
   margin: 0.2em;
   border-radius: 0.75em;
   display: flex;
@@ -396,7 +401,7 @@
 }
 
 body {
-  background: #f3f3f3;
+  background: #fff;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
