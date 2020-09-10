@@ -41,6 +41,7 @@
 .container-header {
   width: 90%;
   margin: 0 auto;
+  padding: 1em;
 }
 
 .dynamic-tabs {
@@ -57,11 +58,10 @@
   border: 1px solid #e27e31;
   margin: auto;
   width: 15em;
-  height: 3em;
-  line-height: 2;
+  height: 2.7em;
   background: #fff;
   font-size: 1.1em;
-  padding: 0 0.7em;
+  padding: 0 0.5em;
   cursor: pointer;
   border-radius: 0.35em;
 }
