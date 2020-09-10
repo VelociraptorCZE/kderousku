@@ -51,6 +51,11 @@
   z-index: -1;
 }
 
+.container-cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .map {
   width: 90%;
   margin: 0 auto;
@@ -95,6 +100,29 @@
   .dynamic-tabs {
     font-size: 1.1em;
   }
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 2px 8px 0 #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.card__left {
+  width: 20%;
+  background: #7d8088;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__right {
+  width: 80%;
+  padding: 0.75em;
 }
 
 .select {

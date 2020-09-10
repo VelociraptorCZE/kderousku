@@ -11,14 +11,18 @@
 			</div>
 		</div>
 
-		<article v-if="activeItem !== null" class="m-3">
-			<h2>{{ activeItem.name }}</h2>
+    <div class="container-cards">
+		  <article v-if="activeItem !== null" class="m-3 card">
 
-			<p>
-				<img :src="activeItem.image" :alt="activeItem.name" class="m-2 float-left">
-				{{ activeItem.info }}
-			</p>
-		</article>
+        <div class="card__left">
+          <h2 class="tc">{{ activeItem.name }}</h2>
+          <img :src="activeItem.image" :alt="activeItem.name" class="m-2 float-left">
+        </div>
+        <div class="card__right">
+          {{ activeItem.info }}
+        </div>
+		  </article>
+    </div>
 	</section>
 </template>
 
