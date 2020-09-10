@@ -3,7 +3,7 @@
 }
 
 .restriction-circles {
-  background: #346af8;
+  background: linear-gradient(to bottom, #4678F3, #45c5e0);
   padding: 3rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -55,7 +55,7 @@
 }
 
 .select {
-  border: 1px solid #e27e31;
+  border: 2px solid #009BF4;
   margin: auto;
   width: 15em;
   height: 2.7em;
@@ -67,7 +67,7 @@
 }
 
 .select:hover {
-  background: #f3f3f3;
+  background: #f4fcfd;
 }
 
 .option-group {
@@ -134,9 +134,9 @@
 .option__label:after {
   content: "";
   display: block;
-  border: 2px solid #e27e31;
+  border: 2px solid #009BF4;
   border-radius: 20px;
-  background: #e27e31;
+  background: #0b9ef3;
   width: 90%;
   margin: auto;
   transform-origin: 0 0;
