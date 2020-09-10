@@ -1,1 +1,27 @@
 @import "../components/restriction-circles";
+
+.container-header {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+  min-height: 30vh;
+
+  &__bg-mask {
+    img {
+      position: absolute;
+      right: 0;
+      opacity: 0.6;
+      z-index: -1;
+    }
+  }
+}
+
+.map {
+  width: 90%;
+  margin: 0 auto;
+
+  @media screen and (min-width: $md) {
+    width: 700px;
+    height: auto;
+  }
+}

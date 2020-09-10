@@ -1,7 +1,25 @@
-.d-block {
-  display: block;
-}
-
 .float-left {
   float: left;
+}
+
+.d {
+  &-flex {
+    display: flex;
+  }
+
+  &-block {
+    display: block;
+  }
+}
+
+.j-con {
+  &__center {
+    justify-content: center;
+  }
+}
+
+.a-ite {
+  &__center {
+    align-items: center;
+  }
 }
