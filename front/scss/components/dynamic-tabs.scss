@@ -1,8 +1,8 @@
 .dynamic-tabs {
-  width: 50%;
+  width: 100%;
   margin: auto;
 
-  @media screen and (max-width: $lg) {
-    width: 90%;
+  @media screen and (min-width: $lg) {
+    width: 60%;
   }
 }

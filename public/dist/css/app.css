@@ -52,12 +52,12 @@
 }
 
 .dynamic-tabs {
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   .dynamic-tabs {
-    width: 90%;
+    width: 60%;
   }
 }
 
@@ -81,7 +81,6 @@
   text-align: center;
   overflow: hidden;
   margin: auto;
-  transform: translateZ(0);
 }
 
 .option-container {
@@ -90,16 +89,13 @@
 }
 
 .option {
-  overflow: hidden;
-  padding: 0.5em;
-  margin: 0.2em;
-  border-radius: 0.75em;
+  margin: auto;
+  width: fit-content;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  flex-direction: column;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.4;
   transition-duration: 0.8s, 0.6s;
   transition-property: transform, opacity;
   transition-timing-function: cubic-bezier(0.98, 0, 0.22, 0.98), linear;
@@ -128,7 +124,7 @@
 }
 
 .option__label {
-  min-width: 23rem;
+  min-width: 25rem;
   width: 100%;
   font-size: 1.5em;
   transform-origin: left bottom;
@@ -151,14 +147,14 @@
 }
 
 .option:last-child .option__label {
-  transform: translateX(0%) scale(0.7);
+  transform: translateX(-3%) scale(0.6);
 }
 .option:last-child .option__indicator {
   transform: translateX(-20%);
 }
 
 .option-input:checked ~ .option {
-  transform: translateX(-20%) translateX(0.2em);
+  transform: translateX(-30%) translateX(0.2em);
 }
 .option-input:checked ~ .option .option__indicator {
   transform: translateX(0%);
@@ -400,9 +396,15 @@
   align-items: center;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   background: #fff;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }

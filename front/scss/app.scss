@@ -5,9 +5,15 @@
 @import "utilities/utilities";
 @import "utilities/utilities";
 
+html {
+  height: -webkit-fill-available; // safari - mobile
+}
+
 body {
   background: #fff;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
