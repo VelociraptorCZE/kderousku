@@ -51,6 +51,17 @@
   z-index: -1;
 }
 
+.map {
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .map {
+    width: 700px;
+    height: auto;
+  }
+}
+
 .dynamic-tabs {
   width: 100%;
   margin: auto;
