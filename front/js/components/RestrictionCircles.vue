@@ -15,11 +15,19 @@
 		  <article v-if="activeItem !== null" class="m-3 card">
 
         <div class="card__left">
-          <h2 class="tc">{{ activeItem.name }}</h2>
-          <img :src="activeItem.image" :alt="activeItem.name" width="64px" height="64px" class="m-2 float-left">
+          <img :src="activeItem.image" :alt="activeItem.name" width="86px" height="86px" class="m-5 p-5 float-left">
         </div>
         <div class="card__right">
-          {{ activeItem.info }}
+          <div class="card__right-header">
+            {{ activeItem.name }}
+          </div>
+          <div class="card__right-date">
+            <span class="card__right-range">01.09. 2020 - 20.09. 2020</span>
+            <span class="card__right-date-date-remain">Zbyvaji 2 dny</span>
+          </div>
+          <div class="card__right-description">
+            {{ activeItem.info }}
+          </div>
         </div>
 		  </article>
     </div>
