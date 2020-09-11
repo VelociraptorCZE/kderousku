@@ -1,7 +1,7 @@
 <template>
 	<section>
 		<div class="restriction-circles">
-			<div :class="`${circle === activeItem ? 'active' : ''} restriction-circles__item`"
+			<div :class="`${circle === activeItem ? 'active' : ''} restriction-circles__item m-1`"
 				 v-for="circle in circles"
 				 @click="activeItem = circle"
 			>

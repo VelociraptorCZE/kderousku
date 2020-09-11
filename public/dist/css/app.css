@@ -12,6 +12,8 @@
 .restriction-circles__item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1 0 25%;
   max-width: 240px;
   color: #fff;
@@ -42,7 +44,7 @@
   width: 90%;
   margin: 0 auto;
   padding: 1em;
-  min-height: 30vh;
+  min-height: 32vh;
 }
 .container-header__bg-mask img {
   position: absolute;
