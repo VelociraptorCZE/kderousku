@@ -5,7 +5,7 @@
 				 v-for="circle in circles"
 				 @click="activeItem = circle"
 			>
-				<img :src="circle.image" :alt="circle.name" width="86px" height="86px" class="m-4">
+				<img :src="circle.image" :alt="circle.name" width="100px" height="100px" class="m-4">
 
 				<span class="restriction-circles__item--header">{{ circle.name }}</span>
 			</div>
