@@ -1,12 +1,12 @@
 .container-header {
   margin: 0 auto;
-  padding: 1rem;
-  min-height: 60vh;
+  min-height: 70vh;
 
   &__mask {
     position: absolute;
     right: 0;
-    opacity: 0.6;
+    top: 48px;
+    opacity: .6;
     z-index: -1;
 
     @media (max-width: $md) {
