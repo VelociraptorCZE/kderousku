@@ -4,7 +4,7 @@
   align-items: center;
 
   &__containers {
-    padding: 1rem;
+    padding: 3rem;
     max-width: 1240px;
     margin: auto;
 
@@ -21,13 +21,13 @@
     text-align: center;
     padding: 1rem;
     position: relative;
-    transform: scale(.85) translateY(0);
+    transform: scale(.85) translateY(2px);
     cursor: pointer;
     transition: .35s;
-    color: $grey;
+    color: lighten($primary, 25%);
 
     &.active {
-      color: $black;
+      color: $primary;
       transform: scale(1.15) translateY(0);
 
       &::after {
