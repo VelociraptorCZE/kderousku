@@ -15,12 +15,11 @@
   justify-content: center;
   align-items: center;
   flex: 1 0 25%;
-  max-width: 240px;
+  max-width: 200px;
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  padding: 2rem 0 0;
   border-radius: 1rem;
 }
 .restriction-circles__item--header {
@@ -49,8 +48,13 @@
 .container-header__bg-mask img {
   position: absolute;
   right: 0.6em;
+  top: 5vh;
   opacity: 0.6;
   z-index: -1;
+}
+
+.navigation {
+  min-height: 7vh;
 }
 
 .map {
@@ -76,7 +80,6 @@
   text-align: center;
 }
 .dynamic-tabs > div {
-  border-bottom: 4px solid #0b9ef3;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   margin: 0.5em;
@@ -163,6 +166,7 @@
 }
 .card__right-range {
   font-size: 1.1em;
+  margin-left: 0.4em;
 }
 
 .select {

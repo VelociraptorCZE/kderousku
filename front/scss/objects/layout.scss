@@ -10,10 +10,15 @@
     img {
       position: absolute;
       right: .6em;
+      top: 5vh;
       opacity: 0.6;
       z-index: -1;
     }
   }
+}
+
+.navigation {
+  min-height: 7vh;
 }
 
 .map {
