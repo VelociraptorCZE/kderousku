@@ -12,7 +12,7 @@
 		</div>
 
 		<article v-if="activeItem !== null" class="m-3">
-			<h2>{{ activeItem.name }}</h2>
+			<h2 class="font-heading">{{ activeItem.name }}</h2>
 
 			<p>
 				<img :src="activeItem.image" :alt="activeItem.name" class="m-2 float-left">
