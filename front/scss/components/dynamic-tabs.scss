@@ -33,12 +33,22 @@
       &::after {
         content: "";
         position: absolute;
-        width: calc(100% - 1rem);
+        animation: .5s forwards underlineFadeIn;
         height: 2px;
         background: $primary;
         bottom: 4px;
         left: .5rem;
       }
     }
+  }
+}
+
+@keyframes underlineFadeIn {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 1rem);
   }
 }
