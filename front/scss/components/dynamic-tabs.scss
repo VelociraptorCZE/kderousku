@@ -1,33 +1,54 @@
 .dynamic-tabs {
-  margin: auto;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-size: 2em;
-  text-align: center;
 
-  > div {
-    //border-bottom: 4px solid #0b9ef3;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    margin: .5em;
-    width: fit-content;
+  &__containers {
+    padding: 1rem;
+    max-width: 1240px;
+    margin: auto;
+
+    [data-tab-container] {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    transform: scale(.85) translateY(0);
     cursor: pointer;
+    transition: .35s;
+    color: $grey;
+
+    &.active {
+      color: $black;
+      transform: scale(1.15) translateY(0);
+
+      &::after {
+        content: "";
+        position: absolute;
+        animation: .5s forwards underlineFadeIn;
+        height: 2px;
+        background: $primary;
+        bottom: 4px;
+        left: .5rem;
+      }
+    }
+  }
+}
+
+@keyframes underlineFadeIn {
+  0% {
+    width: 0;
   }
 
-  @media screen and (min-width: $lg) {
-    width: 70%;
-  }
-
-  @media screen and (max-width: $md) {
-    font-size: 1.5em;
-    width: 80%;
-  }
-
-  @media screen and (max-width: $sm) {
-    font-size: 1.1em;
+  100% {
+    width: calc(100% - 1rem);
   }
 }
