@@ -1,16 +1,34 @@
-.title {
-  text-align: center;
+.intro-header {
+  background: #0e84fd;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  position: relative;
+}
+.intro-header::after {
+  content: "";
+  position: absolute;
+  width: 120vw;
+  height: 96px;
+  bottom: -5px;
+  z-index: -1;
+  opacity: 0.3;
+  left: -2px;
+  transform: rotate(-1deg);
+  background: #0e84fd;
 }
 
 .container-header {
   margin: 0 auto;
-  padding: 1rem;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 .container-header__mask {
   position: absolute;
-  right: 0;
-  opacity: 0.6;
+  right: -208px;
+  top: 48px;
+  opacity: 0.15;
   z-index: -1;
 }
 @media (max-width: 768px) {
@@ -40,7 +58,7 @@
   align-items: center;
 }
 .dynamic-tabs__containers {
-  padding: 1rem;
+  padding: 3rem;
   max-width: 1240px;
   margin: auto;
 }
@@ -54,13 +72,13 @@
   text-align: center;
   padding: 1rem;
   position: relative;
-  transform: scale(0.85) translateY(0);
+  transform: scale(0.85) translateY(2px);
   cursor: pointer;
   transition: 0.35s;
-  color: #888888;
+  color: #8cc5fe;
 }
 .dynamic-tabs__item.active {
-  color: #000;
+  color: #0e84fd;
   transform: scale(1.15) translateY(0);
 }
 .dynamic-tabs__item.active::after {
@@ -68,7 +86,7 @@
   position: absolute;
   animation: 0.5s forwards underlineFadeIn;
   height: 2px;
-  background: #346af8;
+  background: #0e84fd;
   bottom: 4px;
   left: 0.5rem;
 }
@@ -148,11 +166,22 @@
 }
 
 .restriction-badges {
-  background: linear-gradient(to bottom, #4678F3, #45c5e0);
-  padding: 1rem;
+  background: #0e84fd;
+  padding: 3rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+}
+.restriction-badges::after {
+  content: "";
+  position: absolute;
+  width: 120vw;
+  height: 96px;
+  top: -24px;
+  opacity: 0.7;
+  transform: rotate(2deg);
+  background: #0e84fd;
 }
 .restriction-badges__item {
   display: flex;
@@ -176,12 +205,12 @@
   border-radius: 5px;
 }
 .restriction-badges__item:hover {
-  background: #4073f8;
+  background: #1b8afd;
   transform: translateY(-3px);
   transition: 0.5s;
 }
 .restriction-badges__item.active {
-  background: #4d7cf9;
+  background: #2791fd;
 }
 
 .b-left {
@@ -292,8 +321,10 @@
 }
 
 body {
-  background: #ddeeff;
+  background: #fff;
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  color: #333;
+  overflow-x: hidden;
 }
