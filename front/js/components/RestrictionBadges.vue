@@ -1,18 +1,18 @@
 <template>
 	<section>
-		<div class="restriction-circles">
-			<div :class="`${circle === activeItem ? 'active' : ''} restriction-circles__item`"
+		<div class="restriction-badges">
+			<div :class="`${circle === activeItem ? 'active' : ''} restriction-badges__item`"
 				 v-for="circle in circles"
 				 @click="activeItem = circle"
 			>
 				<img :src="circle.image" :alt="circle.name" class="m-4">
 
-				<span class="restriction-circles__item--header">{{ circle.name }}</span>
+				<span class="restriction-badges__item--header">{{ circle.name }}</span>
 			</div>
 		</div>
 
 		<article v-if="activeItem !== null" class="m-3">
-			<h2>{{ activeItem.name }}</h2>
+			<h2 class="font-heading">{{ activeItem.name }}</h2>
 
 			<p>
 				<img :src="activeItem.image" :alt="activeItem.name" class="m-2 float-left">

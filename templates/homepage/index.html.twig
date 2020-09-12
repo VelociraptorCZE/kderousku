@@ -5,43 +5,30 @@
 {% block body %}
 
     <div class="container-header">
-        <div class="container-header__bg-mask">
-            <img src="public/img/patient.svg" alt="mask">
+        <img src="public/img/patient.svg" class="container-header__mask" alt="mask">
+
+        <h1 class="tc font-heading">Kde musím nosit roušku?</h1>
+
+        <div class="dynamic-tabs font-heading" data-tab-id="precautions">
+            <div class="dynamic-tabs__item active" data-tab-trigger="current">Aktuální opatření</div>
+            <div class="dynamic-tabs__item" data-tab-trigger="upcoming">Nadcházející opatření</div>
         </div>
-        <h1 class="tc">Kde musím nosit roušku?</h1>
 
-        <div class="dynamic-tabs">
-            <div>Aktuální opatření</div>
-            <div>Nadcházející opatření</div>
+        <div id="precautions" class="dynamic-tabs__containers">
+            <div data-tab-container="current" class="active">
+                Aktuální opatření
+            </div>
+            <div data-tab-container="upcoming">
+                Nadcházející opatření
+            </div>
         </div>
-{#        <div class="dynamic-tabs">#}
-{#            <div class="option-group">#}
-{#                <div class="option-container">#}
-
-{#                    <input class="option-input" checked id="option-1" type="radio" name="options" />#}
-{#                    <input class="option-input" id="option-2" type="radio" name="options" />#}
-
-{#                    <label class="option" for="option-1">#}
-{#                        <span class="option__indicator"></span>#}
-{#                        <span class="option__label" data-target="circles">Aktuální opatření</span>#}
-{#                    </label>#}
-
-{#                    <label class="option" for="option-2">#}
-{#                        <span class="option__indicator"></span>#}
-{#                        <span class="option__label" data-target="circles-future">Nadcházející opatření</span>#}
-{#                    </label>#}
-
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
     </div>
 
     <div id="circles"></div>
 
-    <div id="circles-future"></div>
-
     <div class="container-header tc">
-        <h2>Kraje</h2>
+        <h2 class="font-heading">Kraje</h2>
+
         <select class="select">
             <option selected disabled>Vyberte kraj</option>
             <option value="1">Praha</option>
