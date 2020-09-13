@@ -9,12 +9,6 @@
 			</div>
 		</div>
 
-		<div :class="`dynamic-tabs__container ${categoryName === activeCategory ? 'active' : ''}`"
-			 v-for="(_, categoryName) in categories"
-		>
-			{{ categoryName }}
-		</div>
-
 		<RestrictionBadges :active-category="activeCategory" :restriction-list="restrictionList" />
 	</section>
 </template>

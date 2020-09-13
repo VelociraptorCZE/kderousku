@@ -1,7 +1,7 @@
 <template>
-	<section>
+	<div>
 		<div class="restriction-badges">
-			<div :class="`${restrictionItem === activeItem ? 'active' : ''} restriction-badges__item m-1`"
+			<div :class="`${restrictionItem === activeItem ? 'active' : ''} restriction-badges__item`"
 				 v-for="restrictionItem in restrictionList[activeCategory]"
 				 @click="activeItem = restrictionItem"
 			>
@@ -11,7 +11,7 @@
 			</div>
 		</div>
 
-		<article v-if="activeItem !== null" class="m-3">
+		<article v-if="activeItem !== null">
 			<div class="card-restriction">
 				<div class="card-restriction__left">
 					<img :src="activeItem.image" :alt="activeItem.name" class="card-restriction__right-img float-left">
@@ -30,7 +30,7 @@
 				</div>
 			</div>
     	</article>
-	</section>
+	</div>
 </template>
 
 <script>
