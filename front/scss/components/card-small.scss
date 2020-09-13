@@ -1,0 +1,13 @@
+.container-cards-small {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-restriction-small {
+  background: $white;
+  box-shadow: 0 2px 8px 0 rgba(209,209,209,1);
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 12px;
+}
