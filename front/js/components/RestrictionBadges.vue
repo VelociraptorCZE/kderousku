@@ -1,11 +1,11 @@
 <template>
 	<section>
 		<div class="restriction-badges">
-			<div :class="`${circle === activeItem ? 'active' : ''} restriction-circles__item m-1`"
+			<div :class="`${circle === activeItem ? 'active' : ''} restriction-badges__item m-1`"
 				 v-for="circle in circles"
 				 @click="activeItem = circle"
 			>
-				<img :src="circle.image" :alt="circle.name" width="100px" height="100px" class="m-4">
+				<img :src="circle.image" :alt="circle.name" class="m-2 restriction-badges__item--img">
 
 				<span class="restriction-badges__item--header">{{ circle.name }}</span>
 			</div>
