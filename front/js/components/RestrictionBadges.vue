@@ -9,6 +9,8 @@
 
 				<span class="restriction-badges__item--header">{{ restrictionItem.name }}</span>
 			</div>
+
+			<h2 v-if="!restrictionList[activeCategory].length">Tady nic není</h2>
 		</div>
 
 		<article v-if="activeItem !== null">
