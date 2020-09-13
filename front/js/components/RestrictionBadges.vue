@@ -12,19 +12,19 @@
 		</div>
 
 		<article v-if="activeItem !== null" class="m-3">
-      <div class="card">
-        <div class="card__left">
-          <img :src="activeItem.image" :alt="activeItem.name" width="86px" height="86px" class="m-5 p-5 float-left">
+      <div class="card-restriction">
+        <div class="card-restriction__left">
+          <img :src="activeItem.image" :alt="activeItem.name" class="card-restriction__right-img float-left">
         </div>
-        <div class="card__right">
-          <div class="card__right-header">
+        <div class="card-restriction__right">
+          <div class="card-restriction__right-header">
             {{ activeItem.name }}
           </div>
-          <div class="card__right-date">
-            <span class="card__right-range">01.09. 2020 - 20.09. 2020</span>
-            <span class="card__right-date-date-remain">Zbyvaji 2 dny</span>
+          <div class="card-restriction__right-date">
+            <span class="card-restriction__right-range">01.09. 2020 - 20.09. 2020</span>
+            <span class="card-restriction__right-date-date-remain">Zbyvaji 2 dny</span>
           </div>
-          <div class="card__right-description">
+          <div class="card-restriction__right-description">
             {{ activeItem.info }}
           </div>
         </div>
@@ -55,7 +55,7 @@
 						id: 3,
 						name: "Lekarna",
 						image: "public/img/hospital.svg",
-						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+						info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate..."
 					},
 					{
 						id: 4,

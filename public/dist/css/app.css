@@ -102,7 +102,7 @@
   justify-content: center;
 }
 
-.card {
+.card-restriction {
   background: #fff;
   box-shadow: 0 2px 8px 0 #d1d1d1;
   max-width: 768px;
@@ -111,11 +111,16 @@
   border-radius: 12px;
 }
 @media screen and (min-width: 768px) {
-  .card {
+  .card-restriction {
     width: 768px;
   }
 }
-.card__left {
+@media screen and (max-width: 480px) {
+  .card-restriction {
+    flex-direction: column;
+  }
+}
+.card-restriction__left {
   flex-basis: 18%;
   background: #a0a3ac;
   border-bottom-left-radius: 12px;
@@ -127,23 +132,33 @@
   align-items: center;
   padding: 0.5em;
 }
-.card__right {
+@media screen and (max-width: 480px) {
+  .card-restriction__left {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+  }
+}
+.card-restriction__right {
   flex-basis: 82%;
   display: flex;
   flex-direction: column;
 }
-.card__right-header {
+.card-restriction__right-header {
   color: #102c3c;
   font-size: 1.7em;
   font-weight: 800;
-  margin: 0.3em 0.75em;
+  margin: 0.3em 0.5em;
   padding: 0.1rem 0;
 }
-.card__right-description {
+.card-restriction__right-img {
+  width: 96px;
+  padding: 0.3em;
+}
+.card-restriction__right-description {
   min-height: 5vh;
   margin: 0.8em;
 }
-.card__right-date {
+.card-restriction__right-date {
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -151,12 +166,12 @@
   padding: 1em;
   bottom: 0;
 }
-.card__right-date-date-remain {
+.card-restriction__right-date-date-remain {
   font-size: 0.7em;
   color: #435d6b;
   align-items: flex-start;
 }
-.card__right-range {
+.card-restriction__right-range {
   font-size: 1.1em;
 }
 
