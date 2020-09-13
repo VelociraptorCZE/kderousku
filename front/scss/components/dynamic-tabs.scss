@@ -3,17 +3,14 @@
   justify-content: center;
   align-items: center;
 
-  &__containers {
-    padding: 3rem;
+  &__container {
+    padding: 3rem 3rem 6rem;
     max-width: 1240px;
     margin: auto;
+    display: none;
 
-    [data-tab-container] {
-      display: none;
-
-      &.active {
-        display: block;
-      }
+    &.active {
+      display: block;
     }
   }
 

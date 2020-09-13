@@ -2,7 +2,7 @@
 	<section>
 		<div class="restriction-badges">
 			<div :class="`${restrictionItem === activeItem ? 'active' : ''} restriction-badges__item m-1`"
-				 v-for="restrictionItem in restrictionList.items"
+				 v-for="restrictionItem in restrictionList[activeCategory]"
 				 @click="activeItem = restrictionItem"
 			>
 				<img :src="restrictionItem.image" :alt="restrictionItem.name" class="m-2 restriction-badges__item--img">
@@ -34,13 +34,12 @@
 </template>
 
 <script>
-	import restrictionList from "../../../public/restriction-list-response.json";
-
 	export default {
+		props: ["restrictionList", "activeCategory"],
+
 		data () {
 			return {
 				activeItem: null,
-				restrictionList
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 {
-  "items": [
+  "current": [
     {
       "id": 1,
       "name": "MHD",
@@ -42,5 +42,6 @@
       "image": "public/img/airplane.svg",
       "info": "Rouška je povinná uvnitř všech budov areálu Letiště Václava Havla."
     }
-  ]
+  ],
+  "upcoming": []
 }
