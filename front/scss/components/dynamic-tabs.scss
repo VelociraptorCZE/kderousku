@@ -2,20 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &__containers {
-    padding: 3rem;
-    max-width: 1240px;
-    margin: auto;
-
-    [data-tab-container] {
-      display: none;
-
-      &.active {
-        display: block;
-      }
-    }
-  }
+  padding-bottom: 1rem;
 
   &__item {
     text-align: center;

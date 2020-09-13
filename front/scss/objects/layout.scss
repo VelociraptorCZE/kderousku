@@ -7,7 +7,7 @@
     right: -208px;
     top: 48px;
     opacity: .15;
-    z-index: -1;
+    z-index: 1;
 
     @media (max-width: $md) {
       display: none;

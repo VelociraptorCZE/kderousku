@@ -7,10 +7,11 @@
 
 .card-restriction {
   background: $white;
-  box-shadow: 0 2px 8px 0 rgba(209,209,209,1);
+  box-shadow: 0 0 8px #c6c6c6;
   max-width: 768px;
-  margin: 0 auto;
+  margin: 1rem auto;
   display: flex;
+  overflow: hidden;
   border-radius: 12px;
 
   @media screen and (min-width: $md) {
@@ -40,6 +41,8 @@
   }
 
   &__right {
+    z-index: 10;
+    background: $white;
     flex-basis: 82%;
     display: flex;
     flex-direction: column;
