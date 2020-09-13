@@ -170,7 +170,9 @@
   padding: 3rem 1rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  color: #fff;
   position: relative;
 }
 .restriction-badges::after {
@@ -299,6 +301,10 @@
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.m-center {
+  margin: 0 auto;
 }
 
 .float-left {
