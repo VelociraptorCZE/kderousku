@@ -12,7 +12,7 @@
 		</div>
 
 		<article v-if="activeItem !== null" class="m-3 card">
-			<h2 class="font-heading">{{ activeItem.name }}</h2>
+<!--			<h2 class="font-heading">{{ activeItem.name }}</h2>-->
 
         <div class="card__left">
           <img :src="activeItem.image" :alt="activeItem.name" width="86px" height="86px" class="m-5 p-5 float-left">
