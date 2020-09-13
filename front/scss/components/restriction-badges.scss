@@ -9,18 +9,6 @@
   color: $white;
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 120vw;
-    z-index: -1;
-    height: 96px;
-    bottom: -24px;
-    opacity: 0.7;
-    transform: rotate(2deg);
-    background: $primary;
-  }
-
   &__item {
     display: flex;
     flex-direction: column;

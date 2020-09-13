@@ -7,10 +7,11 @@
 
 .card-restriction {
   background: $white;
-  box-shadow: 0 2px 8px 0 $grey-extra-light;
+  box-shadow: 0 0 8px #c6c6c6;
   max-width: 768px;
-  margin: 2.5rem auto;
+  margin: 1rem auto;
   display: flex;
+  overflow: hidden;
   border-radius: 12px;
 
   @media screen and (min-width: $md) {
