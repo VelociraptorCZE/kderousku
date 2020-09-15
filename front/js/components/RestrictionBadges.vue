@@ -26,10 +26,9 @@
 					</div>
 					<div class="card-restriction__right-date">
 						<span class="card-restriction__right-range">{{ activeItem.start }} - {{ activeItem.end }}</span>
-						<!--
-						TODO: disabled for now, implement this later
-						<span class="card-restriction__right-date-date-remain">Zbyvaji 2 dny</span>
-						-->
+						<span class="card-restriction__right-date-date-remain" v-if="activeItem.daysLeft">
+							Zbývají {{ activeItem.daysLeft }} dny
+						</span>
 					</div>
 					<div class="card-restriction__right-description">
 						{{ activeItem.info }}
