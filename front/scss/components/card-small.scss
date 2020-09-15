@@ -10,4 +10,10 @@
   margin: 0 auto;
   display: flex;
   border-radius: 12px;
+
+
+  &__right {
+    flex-basis: 82%;
+    display: flex;
+  }
 }

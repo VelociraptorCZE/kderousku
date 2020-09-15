@@ -1,0 +1,9 @@
+.footer {
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background: $primary;
+  min-height: 10vh;
+}

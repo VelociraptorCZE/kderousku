@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+{#        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">#}
+{#        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">#}
         <link rel="stylesheet" href="{{ assetPath('css/app.css') }}">
         <meta name="description" content="Informace o tom, na kterých místech Vláda ČR, nařizuje nošení roušek.">
         <script src="{{ assetPath('js/app.js') }}" async defer></script>
@@ -13,6 +13,13 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+
+        <footer class="footer">
+            <div><h3>neco</h3></div>
+            <div><h3>Socialni site</h3></div>
+            <div><h3>neco</h3></div>
+        </footer>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
