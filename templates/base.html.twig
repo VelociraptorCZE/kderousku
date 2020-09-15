@@ -16,8 +16,8 @@
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-{#        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">#}
-{#        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">#}
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ assetPath('css/app.css') }}">
         <meta name="description" content="Informace o tom, na kterých místech Vláda ČR, nařizuje nošení roušek.">
         <script src="https://polyfill.io/v3/polyfill.min.js?features={{ polyfillObjects|join('%2C') }}"></script>
@@ -29,9 +29,17 @@
         {% block body %}{% endblock %}
 
         <footer class="footer">
-            <div><h3>neco</h3></div>
-            <div><h3>Socialni site</h3></div>
-            <div><h3>neco</h3></div>
+            <div class="footer__container">
+                <div><h3>neco</h3></div>
+                <div><h3>Socialni site</h3></div>
+                <div><h3>neco</h3></div>
+            </div>
+
+            <div name="authors" class="pt-4">
+                <a href="https://www.linkedin.com/in/martin-pu%C4%8Dan-b4698715a/">Martin Pučan</a> &&
+                <a href="https://www.linkedin.com/in/simonraichl/">Šimon Raichl</a> &&
+                <a href="https://www.freepik.com/">Freepik</a>
+            </div>
         </footer>
 
         {% block javascripts %}{% endblock %}
