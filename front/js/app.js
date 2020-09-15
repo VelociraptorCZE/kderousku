@@ -1,10 +1,7 @@
 import Vue from "vue";
-import RestrictionBadges from "./components/RestrictionBadges.vue";
-import DynamicTabs from "./components/DynamicTabs";
-
-DynamicTabs();
+import Restrictions from "./components/Restrictions.vue";
 
 new Vue({
-	el: "#circles",
-	render: r => r(RestrictionBadges)
+	el: "#main",
+	render: r => r(Restrictions)
 });
