@@ -1,3 +1,8 @@
+{% set polyfillObjects = [
+    'Object.assign',
+    'fetch'
+] %}
+
 <!DOCTYPE html>
 <html lang="cs">
     <head>
@@ -7,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ assetPath('css/app.css') }}">
         <meta name="description" content="Informace o tom, na kterých místech Vláda ČR, nařizuje nošení roušek.">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features={{ polyfillObjects|join('%2C') }}"></script>
         <script src="{{ assetPath('js/app.js') }}" async defer></script>
         <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
