@@ -10,7 +10,9 @@
 				<span class="restriction-badges__item--header">{{ restrictionItem.name }}</span>
 			</div>
 
-			<h2 v-if="!restrictionList[activeCategory].length">Tady nic není</h2>
+			<h2 v-if="!restrictionList[activeCategory].length">
+				{{ restrictionList.isLoading ? 'Načítám...' : 'Tady nic není' }}
+			</h2>
 		</div>
 
 		<article v-if="activeItem !== null">
@@ -23,8 +25,10 @@
 						{{ activeItem.name }}
 					</div>
 					<div class="card-restriction__right-date">
-						<span class="card-restriction__right-range">01.09. 2020 - 20.09. 2020</span>
-						<span class="card-restriction__right-date-date-remain">Zbyvaji 2 dny</span>
+						<span class="card-restriction__right-range">{{ activeItem.start }} - {{ activeItem.end }}</span>
+						<span class="card-restriction__right-date-date-remain" v-if="activeItem.daysLeft">
+							Zbývají {{ activeItem.daysLeft }} dnů
+						</span>
 					</div>
 					<div class="card-restriction__right-description">
 						{{ activeItem.info }}

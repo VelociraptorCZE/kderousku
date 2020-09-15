@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import restrictionList from "../../../public/restriction-list-response.json";
+import regeneratorRuntime from "regenerator-runtime";
 import RestrictionBadges from "./RestrictionBadges.vue";
 
 export default {
@@ -22,15 +22,25 @@ export default {
 		RestrictionBadges
 	},
 
-	data: function () {
+	data () {
 		return {
-			restrictionList,
+			restrictionList: {
+				isLoading: true,
+				current: [],
+				upcoming: []
+			},
 			categories: {
 				current: "Aktuální opatření",
 				upcoming: "Nadcházející opatření"
 			},
 			activeCategory: "current"
 		};
+	},
+
+	async beforeMount () {
+		const restrictionListResponse = await fetch("api/restriction-list");
+
+		this.restrictionList = await restrictionListResponse.json();
 	}
 }
 </script>
