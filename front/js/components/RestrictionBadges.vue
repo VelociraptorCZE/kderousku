@@ -16,7 +16,7 @@
 		</div>
 
 		<article v-if="activeItem !== null">
-			<div class="card-restriction">
+			<div class="card-restriction" ref="card">
 				<div class="card-restriction__left">
 					<img :src="activeItem.image" :alt="activeItem.name" class="card-restriction__right-img float-left">
 				</div>
@@ -46,6 +46,25 @@
 		data () {
 			return {
 				activeItem: null,
+			}
+		},
+
+		updated () {
+			this.scrollToCard();
+		},
+
+		methods: {
+			scrollToCard () {
+				const { card } = this.$refs;
+
+				if (!card) {
+					return;
+				}
+
+				setTimeout(() => {
+					const { top } = card.getBoundingClientRect();
+					scroll(0, top);
+				}, 10);
 			}
 		}
 	}
