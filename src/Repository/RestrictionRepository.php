@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -19,32 +20,24 @@ class RestrictionRepository extends ServiceEntityRepository
         parent::__construct($registry, Restriction::class);
     }
 
-    // /**
-    //  * @return Restriction[] Returns an array of Restriction objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findCurrentRestrictions(): array
     {
-        return $this->createQueryBuilder('r')
-            ->andWhere('r.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('r.id', 'ASC')
-            ->setMaxResults(10)
+        return $this
+            ->createQueryBuilder('restriction')
+            ->select('restriction.name, restriction.image, restriction.info, restriction.start, restriction.end')
+            ->andWhere('restriction.start <= CURRENT_DATE()')
+            ->andWhere('restriction.end >= CURRENT_DATE() or restriction.end is null')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getArrayResult();
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Restriction
+    public function findUpcomingRestrictions(): array
     {
-        return $this->createQueryBuilder('r')
-            ->andWhere('r.exampleField = :val')
-            ->setParameter('val', $value)
+        return $this
+            ->createQueryBuilder('restriction')
+            ->select('restriction.name, restriction.image, restriction.info, restriction.start, restriction.end')
+            ->andWhere('restriction.start > CURRENT_DATE()')
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->getArrayResult();
     }
-    */
 }
