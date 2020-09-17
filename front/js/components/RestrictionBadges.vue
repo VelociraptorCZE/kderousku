@@ -51,7 +51,7 @@
 		},
 
 		updated () {
-			this.scrollToCard();
+			// this.scrollToCard();
 		},
 
 		methods: {

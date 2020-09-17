@@ -33,27 +33,30 @@
             <div class="footer__container">
                 <div>
                     <div class="footer__header">Zdroje</div>
-                    <a href="https://koronavirus.mzcr.cz/otazky-a-odpovedi/">MZCR</a>
-                    <a href="https://covidpass.cz">CovidPass</a>
+                    <div class="d-col">
+                        <a href="https://koronavirus.mzcr.cz/">MZČR</a>
+                        <a href="https://covidpass.cz">CovidPass</a>
+                    </div>
                 </div>
                 <div>
                     <div class="footer__header">Socialni site</div>
-                    <a href="https://www.instagram.com/kderousku/" class="text-white d-flex align-items-center" target="_blank">
-                        <img height="32" src="{{ imagePath('instagram.svg') }}" class="pr-2" alt="instagram">
-                        Follow us on Instagram
-                    </a>
+                    <div>
+                        <a href="https://www.instagram.com/kderousku/" target="_blank">
+                            Instagram
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <div class="footer__header">Team</div>
-                    <a href="{{ path('about_us') }}">About us</a>
+                    <a href="{{ path('about_us') }}">O nás</a>
                 </div>
             </div>
 
-            <div name="authors" class="pt-4">
-                <a href="https://www.linkedin.com/in/martin-pu%C4%8Dan-b4698715a/">Martin Pučan</a> &&
-                <a href="https://www.linkedin.com/in/simonraichl/">Šimon Raichl</a> &&
-                <a href="https://www.freepik.com/">Freepik</a>
-            </div>
+{#            <div name="authors" class="tc pt-4">#}
+{#                <a href="https://www.linkedin.com/in/martin-pu%C4%8Dan-b4698715a/">Martin Pučan</a> &&#}
+{#                <a href="https://www.linkedin.com/in/simonraichl/">Šimon Raichl</a> &&#}
+{#                <a href="https://www.freepik.com/">Freepik</a>#}
+{#            </div>#}
         </footer>
 
         {% block javascripts %}{% endblock %}

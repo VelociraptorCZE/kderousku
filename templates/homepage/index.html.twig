@@ -6,30 +6,33 @@
     <div class="container-header">
         <img src="public/img/patient.svg" class="container-header__mask" alt="mask">
 
-{#        <div class="tc font-heading intro-header">Kde musím nosit roušku?</div>#}
+        <div class="tc font-heading intro-header">
+            Kde musím nosit roušku?
+        </div>
 
         <div id="main"></div>
     </div>
-    <div class="container-centered">
-        <h2 class="tc">Připravujeme</h2>
-        <h2 class="tc">Sponzorují nás</h2>
-        <img class="sponsor-logo" src="public/img/logo-svet-mobilu.jpg" alt="svet mobilu">
-    </div>
-
-
-    {#
-    <div class="m-center tc">
+    <div class="container-centered p-3">
         <h2 class="font-heading">Kraje</h2>
-        <select class="select">
-            <option selected disabled>Vyberte kraj</option>
-            <option value="1">Praha</option>
-            <option value="2">Moravskoslezky</option>
-            <option value="3">Atd</option>
-        </select>
+        <label>
+            <select class="select">
+                <option selected disabled>Vyberte kraj</option>
+                <option value="1">Praha</option>
+                <option value="2">Moravskoslezky</option>
+                <option value="3">Atd</option>
+            </select>
+        </label>
     </div>
 
     <div class="map">
         <img src="public/img/map-cr.svg" alt="Mapa ČR">
     </div>
-    #}
+
+    <h2 class="tc">Připravujeme</h2>
+    <h2 class="tc">Sponzorují nás</h2>
+    <img class="sponsor-logo" src="public/img/logo-svet-mobilu.jpg" alt="svet mobilu">
+
+
+
+
 {% endblock %}

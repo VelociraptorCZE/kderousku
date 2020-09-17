@@ -3,29 +3,36 @@ footer {
 }
 
 .footer {
-  width: 100%;
   bottom: 0;
-  padding: 1rem;
-  margin-top: 0;
+  padding: 1em;
+  margin: 0 auto;
   background: $primary;
-  color: white;
+  color: #115a77;
   min-height: 10vh;
-  text-align: center;
+  font-size: .9em;
 
   &__header {
-    font-size: 1.4em;
-    left: 0;
+    font-size: 1.25em;
+    color: $white;
+    margin-bottom: .4em;
+    margin-top: .5em;
   }
 
   &__container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
   }
 
   a {
-    color: $white;
-    text-underline: none;
+    text-decoration: none;
+    color: #c4d3ff;
+    line-height: 1.5em;
+
+    &:hover {
+      color: $white;
+    }
   }
+
 }

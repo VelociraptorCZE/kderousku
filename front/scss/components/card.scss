@@ -22,9 +22,14 @@
     flex-direction: column;
   }
 
-  &__left {
+  @media screen and (max-width: $md) {
+    margin: .6rem;
+  }
+
+
+    &__left {
     flex-basis: 18%;
-    background: #a0a3ac;
+    background: #bbbdc1;
     border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
     color: white;
@@ -53,16 +58,25 @@
       font-weight: 800;
       margin: 0.3em .5em;
       padding: .1rem 0;
+
+      @media screen and (max-width: $sm) {
+        text-align: center;
+      }
+
     }
 
     &-img {
       width: 96px;
       padding: .3em;
+
+      @media screen and (max-width: $sm) {
+        width: 64px;
+      }
     }
 
     &-description {
       min-height: 5vh;
-      margin: .8em;
+      margin: .9em;
     }
 
     &-date {
@@ -73,15 +87,28 @@
       padding: 1em;
       bottom: 0;
 
+      @media screen and (max-width: $sm) {
+        justify-content: center;
+        padding: .6em;
+      }
+
       &-date-remain {
         font-size: 0.7em;
         color: hsl(201, 23%, 34%);
         align-items: flex-start;
+
+        @media screen and (max-width: $sm) {
+          margin-left: 1em;
+        }
       }
     }
 
     &-range {
       font-size: 1.1em;
+
+      @media screen and (max-width: $sm) {
+        text-align: center;
+      }
     }
   }
 }
