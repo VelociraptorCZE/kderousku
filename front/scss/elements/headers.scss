@@ -7,6 +7,16 @@
   opacity: .9;
   position: relative;
 
+  @media screen and (max-width: $sm) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: $md) {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
   &::after {
     content: "";
     position: absolute;
