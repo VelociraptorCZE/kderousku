@@ -29,7 +29,6 @@
 						<span class="card-restriction__right-date-date-remain" v-if="activeItem.daysLeft">
 							Zbývají {{ activeItem.daysLeft }} dny
 						</span>
-
 					</div>
 					<div class="card-restriction__right-description">
 						{{ activeItem.info }}

@@ -9,14 +9,18 @@
   color: $white;
   position: relative;
 
+  @media screen and (max-width: $sm) {
+    padding: .3rem;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1 0 25%;
-    margin: .7rem;
-    padding: .4em;
+    margin: .6rem;
+    padding: .5em;
     max-width: 150px;
     color: $white;
     text-align: center;
@@ -26,8 +30,8 @@
     animation: boost 1s ease;
 
     @media screen and (max-width: $sm) {
-      margin: .8rem;
-      max-width: 100px;
+      margin: .6rem;
+      max-width: 70px;
     }
 
     @keyframes boost {
@@ -43,8 +47,7 @@
       width: 64px;
 
       @media screen and (max-width: $sm) {
-        margin: .8rem;
-        max-width: 100px;
+        width: 40px;
       }
     }
 
@@ -56,6 +59,10 @@
       opacity: .9;
       padding: .07rem 1.5rem;
       border-radius: 5px;
+
+      @media screen and (max-width: $sm) {
+        padding: .07rem .9rem;
+      }
     }
 
     &:hover {
