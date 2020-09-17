@@ -17,6 +17,7 @@ class RestrictionTransformer
             $restriction['start'] = $start instanceof DateTime ? $start->format('j. n. Y') : 'N/A';
             $restriction['end'] = $end instanceof DateTime ? $end->format('j. n. Y') : 'N/A';
 
+            // spatne jsme se pochopili - kolik zbyva dnu z toho opatreni
             if ($start > $now) {
                 $restriction['daysLeft'] = $start->diff($now)->days;
             }
