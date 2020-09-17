@@ -31,9 +31,22 @@
 
         <footer class="footer">
             <div class="footer__container">
-                <div><h3>neco</h3></div>
-                <div><h3>Socialni site</h3></div>
-                <div><h3>neco</h3></div>
+                <div>
+                    <div class="footer__header">Zdroje</div>
+                    <a href="https://koronavirus.mzcr.cz/otazky-a-odpovedi/">MZCR</a>
+                    <a href="https://covidpass.cz">CovidPass</a>
+                </div>
+                <div>
+                    <div class="footer__header">Socialni site</div>
+                    <a href="https://www.instagram.com/kderousku/" class="text-white d-flex align-items-center" target="_blank">
+                        <img height="32" src="{{ imagePath('instagram.svg') }}" class="pr-2" alt="instagram">
+                        Follow us on Instagram
+                    </a>
+                </div>
+                <div>
+                    <div class="footer__header">Team</div>
+                    <a href="{{ path('about_us') }}">About us</a>
+                </div>
             </div>
 
             <div name="authors" class="pt-4">

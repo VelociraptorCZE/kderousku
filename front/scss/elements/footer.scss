@@ -1,3 +1,7 @@
+footer {
+  z-index: 2;
+}
+
 .footer {
   width: 100%;
   bottom: 0;
@@ -8,10 +12,16 @@
   min-height: 10vh;
   text-align: center;
 
+  &__header {
+    font-size: 1.4em;
+    left: 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   a {
