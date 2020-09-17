@@ -31,6 +31,7 @@
               </span>
             </div>
             <div class="card-restriction__right-description">
+<!--              {{ activeItem.info | truncate(10, '...')}}-->
               {{ activeItem.info }}
             </div>
           </div>
