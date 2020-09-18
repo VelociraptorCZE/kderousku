@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 1rem;
+  margin: 0 1rem;
   text-decoration: none;
 
   &__name {
@@ -10,19 +10,19 @@
     font-size: 1.1rem;
   }
 
-  &:hover {
-    text-decoration: underline;
-    color: $black;
-  }
-
-  img {
+  &__image {
     border-radius: 50%;
     width: 100px;
-    margin: .7rem;
+    margin: 0 0 .7rem;
 
     &:hover {
       transform: scale(1.1);
       transition: .35s;
     }
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: $black;
   }
 }
