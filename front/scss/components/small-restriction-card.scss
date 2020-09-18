@@ -1,0 +1,73 @@
+$details-padding: .7em;
+
+.small-restriction-card {
+  margin: 0 auto;
+  font-size: 1rem;
+  background: $white;
+  box-shadow: 0 0 8px #c6c6c6;
+  max-width: 768px;
+  border-radius: 8px;
+  position: relative;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 10%;
+
+    img {
+      width: 38px;
+    }
+  }
+
+  &__right {
+    flex-basis: 77%;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &--header {
+      font-size: 1.2rem;
+      margin-left: .5rem;
+      padding: .1rem;
+    }
+
+    &--date {
+      color: $grey;
+      padding-right: .4rem;
+      font-size: .9rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.2rem;
+  }
+
+  &__content {
+    border-top: 1px solid #e2e8f0;
+    cursor: default;
+    padding: $details-padding;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__summary {
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: $md) {
+    margin: .6rem;
+  }
+}
