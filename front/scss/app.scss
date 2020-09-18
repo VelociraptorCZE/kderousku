@@ -4,6 +4,10 @@
 @import "components/components";
 @import "utilities/utilities";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $white;
   margin: 0;

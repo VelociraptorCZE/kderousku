@@ -18,7 +18,7 @@ class RestrictionTransformer
             $restriction['end'] = $end instanceof DateTime ? $end->format('j. n. Y') : 'do odvolání';
 
             if ($start > $now) {
-                $restriction['daysLeft'] = $start->diff($now)->days;
+                $restriction['daysLeft'] = "Opatření začne platit za {$start->diff($now)->days} dnů";
             }
 
             return $restriction;
