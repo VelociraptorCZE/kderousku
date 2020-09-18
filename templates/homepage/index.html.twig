@@ -10,24 +10,54 @@
 
         <div id="main"></div>
     </div>
-    <div class="container-centered p-3">
-        <h2 class="font-heading">Kraje</h2>
-        <label>
-            <select class="select">
-                <option selected disabled>Vyberte kraj</option>
-                <option value="1">Praha</option>
-                <option value="2">Moravskoslezky</option>
-                <option value="3">Atd</option>
-            </select>
-        </label>
+{#    <div class="container-centered p-3">#}
+{#        <h2 class="font-heading">Kraje</h2>#}
+{#        <label>#}
+{#            <select class="select">#}
+{#                <option selected disabled>Vyberte kraj</option>#}
+{#                <option value="1">Praha</option>#}
+{#                <option value="2">Moravskoslezky</option>#}
+{#                <option value="3">Atd</option>#}
+{#            </select>#}
+{#        </label>#}
+{#    </div>#}
+
+{#    <div class="map">#}
+{#        <img src="public/img/map-cr.svg" alt="Mapa ČR">#}
+{#    </div>#}
+
+    <div class="tc">
+        <h2 class="tc">Připravujeme</h2>
+        <h3 class="font-heading">Kraje</h3>
+        <p>- informace o opatřeních a situaci v jednotlivých krají</p>
+        <h3 class="font-heading">Opatření v sousedních zemí</h3>
+        <p>- informace, které opatření platí v sousedních státech</p>
     </div>
 
-    <div class="map">
-        <img src="public/img/map-cr.svg" alt="Mapa ČR">
+    <div class="container-flex-center">
+        <div>
+            <img src="https://www.countryflags.io/de/flat/64.png" alt="Německo">
+            <div>Německo</div>
+        </div>
+        <div>
+            <img src="https://www.countryflags.io/sk/flat/64.png" alt="Slovenko">
+            <div>Slovenko</div>
+        </div>
+        <div>
+            <img src="https://www.countryflags.io/at/flat/64.png" alt="Rakousko">
+            <div>Rakousko</div>
+        </div>
+        <div>
+            <img src="https://www.countryflags.io/pl/flat/64.png" alt="Polsko">
+            <div>Polsko</div>
+        </div>
     </div>
 
-    <h2 class="tc">Připravujeme</h2>
-    <h2 class="tc">Sponzorují nás</h2>
-    <img class="sponsor-logo" src="public/img/logo-svet-mobilu.jpg" alt="svet mobilu">
+    <div class="container-centered">
+        <h2>Sponzorují nás</h2>
+        <div>
+            <img class="sponsor-logo" src="public/img/logo-svet-mobilu.jpg" alt="svet mobilu">
+        </div>
+    </div>
 
 {% endblock %}
