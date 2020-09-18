@@ -1,11 +1,11 @@
 footer {
   z-index: 2;
+  margin-top: 0;
+  bottom: 0;
 }
 
 .footer {
-  bottom: 0;
   padding: 1em;
-  margin: 0 auto;
   background: $primary;
   color: #115a77;
   min-height: 10vh;
