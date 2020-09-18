@@ -1,0 +1,8 @@
+.collaborator-logo {
+  filter: grayscale(1);
+  transition: .3s;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}

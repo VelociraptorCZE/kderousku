@@ -1,5 +1,4 @@
-.container-header {
-  margin: 0 auto;
+.main-container {
   min-height: 50vh;
   width: 100%;
 
@@ -8,8 +7,8 @@
     opacity: .15;
     position: absolute;
     width: 100vw;
-    height: 100%;
-    background: url("#{$img-path}/patient.svg") no-repeat calc(100% + 140px) center / contain;
+    height: 50vh;
+    background: url("#{$img-path}/patient.svg") no-repeat calc(100% + 140px) top / contain;
     z-index: -1;
 
     @media (max-width: $md) {
@@ -18,10 +17,10 @@
   }
 }
 
-.container-centered {
+.container {
   width: 90%;
+  max-width: 1240px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .container-flex-center {
