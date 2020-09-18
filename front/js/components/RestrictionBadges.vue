@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="restriction-badges">
+		<div class="restriction-badges" ref="badges">
 			<div :class="`${restrictionItem === activeItem ? 'active' : ''} restriction-badges__item`"
 				 v-for="restrictionItem in restrictionList[activeCategory]"
 				 @click="activeItem = restrictionItem"
@@ -72,21 +72,22 @@ export default {
 	},
 
 	updated () {
-		// this.scrollToCard();
+		this.scrollToCard();
 	},
 
 	methods: {
 		scrollToCard () {
 			const { card } = this.$refs;
 
-			if (!card) {
+			if (!card || this.getBadgeContainerHeight() < innerHeight / 1.25) {
 				return;
 			}
 
-			setTimeout(() => {
-				const { top } = card.getBoundingClientRect();
-				scroll(0, top);
-			}, 10);
+			setTimeout(() => scroll(0, card.offsetTop - 96), 10);
+		},
+
+		getBadgeContainerHeight () {
+			return this.$refs.badges?.getBoundingClientRect()?.height;
 		}
 	}
 }
