@@ -15,77 +15,77 @@
 			</h2>
 		</div>
 
-      <article v-if="activeItem !== null">
-        <div class="restriction-card" ref="card">
-          <div class="restriction-card__left">
-            <img :src="activeItem.image" :alt="activeItem.name" class="restriction-card__right-img float-left">
-          </div>
-          <div class="restriction-card__right">
-            <div class="restriction-card__right-header">
-              {{ activeItem.name }}
-            </div>
-            <div class="restriction-card__right-date">
-              <span class="restriction-card__right-range">{{ activeItem.start }} - {{ activeItem.end }}</span>
-              <span class="restriction-card__right-date-date-remain" v-if="activeItem.daysLeft">
-                {{ activeItem.daysLeft }}
-              </span>
-            </div>
-            <div class="restriction-card__right-description">
-              {{ activeItem.info }}
-            </div>
-          </div>
-        </div>
-
-<!--         SMALL CARDS-->
-        <div>
-          <details class="small-restriction-card">
-            <summary class="small-restriction-card__summary">
-              <div class="d-flex p-3">
-                <div class="small-restriction-card__left">
-                  <img :src="activeItem.image" :alt="activeItem.name">
-                </div>
-                <div class="small-restriction-card__right">
-					<div class="small-restriction-card__right--header">{{ activeItem.name }}</div>
-					<div class="small-restriction-card__right--date">{{ activeItem.start }} - {{ activeItem.end }}</div>
-                </div>
-              </div>
-            </summary>
-            <div class="small-restriction-card__content">
-				{{ activeItem.info }}
+		<article v-if="activeItem !== null">
+			<div class="restriction-card" ref="card">
+				<div class="restriction-card__left">
+					<img :src="activeItem.image" :alt="activeItem.name" class="restriction-card__right-img float-left">
+				</div>
+				<div class="restriction-card__right">
+					<div class="restriction-card__right-header">
+						{{ activeItem.name }}
+					</div>
+					<div class="restriction-card__right-date">
+						<span class="restriction-card__right-range">{{ activeItem.start }} - {{ activeItem.end }}</span>
+						<span class="restriction-card__right-date-date-remain" v-if="activeItem.daysLeft">
+							{{ activeItem.daysLeft }}
+						</span>
+					</div>
+					<div class="restriction-card__right-description">
+						{{ activeItem.info }}
+					</div>
+				</div>
 			</div>
-          </details>
-        </div>
-    	</article>
+
+			<!--
+		  <div>
+			<details class="small-restriction-card">
+			  <summary class="small-restriction-card__summary">
+				<div class="d-flex p-3">
+				  <div class="small-restriction-card__left">
+					<img :src="activeItem.image" :alt="activeItem.name">
+				  </div>
+				  <div class="small-restriction-card__right">
+					  <div class="small-restriction-card__right--header">{{ activeItem.name }}</div>
+					  <div class="small-restriction-card__right--date">{{ activeItem.start }} - {{ activeItem.end }}</div>
+				  </div>
+				</div>
+			  </summary>
+			  <div class="small-restriction-card__content">
+				  {{ activeItem.info }}
+			  </div>
+			</details>
+		  </div>SMALL CARD -->
+		</article>
 	</div>
 </template>
 
 <script>
-	export default {
-		props: ["restrictionList", "activeCategory"],
+export default {
+	props: ["restrictionList", "activeCategory"],
 
-		data () {
-			return {
-				activeItem: null,
+	data () {
+		return {
+			activeItem: null,
+		}
+	},
+
+	updated () {
+		// this.scrollToCard();
+	},
+
+	methods: {
+		scrollToCard () {
+			const { card } = this.$refs;
+
+			if (!card) {
+				return;
 			}
-		},
 
-		updated () {
-			// this.scrollToCard();
-		},
-
-		methods: {
-			scrollToCard () {
-				const { card } = this.$refs;
-
-				if (!card) {
-					return;
-				}
-
-				setTimeout(() => {
-					const { top } = card.getBoundingClientRect();
-					scroll(0, top);
-				}, 10);
-			}
+			setTimeout(() => {
+				const { top } = card.getBoundingClientRect();
+				scroll(0, top);
+			}, 10);
 		}
 	}
+}
 </script>
