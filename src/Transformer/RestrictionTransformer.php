@@ -15,10 +15,10 @@ class RestrictionTransformer
             ['start' => $start, 'end' => $end] = $restriction;
 
             $restriction['start'] = $start instanceof DateTime ? $start->format('j. n. Y') : 'N/A';
-            $restriction['end'] = $end instanceof DateTime ? $end->format('j. n. Y') : 'N/A';
+            $restriction['end'] = $end instanceof DateTime ? $end->format('j. n. Y') : 'do odvolání';
 
             if ($start > $now) {
-                $restriction['daysLeft'] = $start->diff($now)->days;
+                $restriction['daysLeft'] = "Opatření začne platit za {$start->diff($now)->days} dnů";
             }
 
             return $restriction;

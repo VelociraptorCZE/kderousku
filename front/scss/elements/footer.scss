@@ -1,0 +1,33 @@
+.footer {
+  padding: 1rem;
+  margin-top: auto;
+  background: $primary;
+  color: #115a77;
+  min-height: 10vh;
+  font-size: .9rem;
+
+  &__header {
+    font-size: 1.25rem;
+    color: $white;
+    margin-bottom: .4rem;
+    margin-top: .5rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  a {
+    text-decoration: none;
+    color: #c4d3ff;
+    line-height: 1.5rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+}

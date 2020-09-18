@@ -10,16 +10,17 @@
   &-block {
     display: block;
   }
-}
 
-.j-con {
-  &__center {
-    justify-content: center;
+  &-col {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.a-ite {
-  &__center {
-    align-items: center;
-  }
+.jcc {
+  justify-content: center;
+}
+
+.aic {
+  align-items: center;
 }

@@ -9,22 +9,51 @@
   color: $white;
   position: relative;
 
+  @media screen and (max-width: $sm) {
+    padding: .3rem;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1 0 25%;
-    margin: 1rem;
+    margin: .3rem;
+    padding: .4em;
     max-width: 150px;
     color: $white;
     text-align: center;
     cursor: pointer;
     border-radius: 1rem;
     z-index: 10;
+    animation: boost 1s ease;
+
+    @media screen and (max-width: $sm) {
+      margin: .6rem;
+      max-width: 70px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin: .5rem;
+      max-width: 100px;
+    }
+
+    @keyframes boost {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
     &--img {
       width: 64px;
+
+      @media screen and (max-width: $sm) {
+        width: 40px;
+      }
     }
 
     &--header {
@@ -35,6 +64,10 @@
       opacity: .9;
       padding: .07rem 1.5rem;
       border-radius: 5px;
+
+      @media screen and (max-width: $sm) {
+        padding: .07rem .9rem;
+      }
     }
 
     &:hover {

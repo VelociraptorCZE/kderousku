@@ -28,6 +28,10 @@
       }
     }
   }
+
+  @media (max-width: $md) {
+    padding: .5rem;
+  }
 }
 
 @keyframes underlineFadeIn {

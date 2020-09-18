@@ -1,11 +1,4 @@
-.container-cards {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.card-restriction {
+.restriction-card {
   background: $white;
   box-shadow: 0 0 8px #c6c6c6;
   max-width: 768px;
@@ -14,25 +7,21 @@
   overflow: hidden;
   border-radius: 12px;
 
-  @media screen and (min-width: $md) {
-    width: 768px;
-  }
-
-  @media screen and (max-width: $sm) {
-    flex-direction: column;
+  @media (max-width: $md) {
+    margin: .6rem;
   }
 
   &__left {
     flex-basis: 18%;
-    background: #a0a3ac;
+    background: #bbbdc1;
     border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
-    color: white;
+    color: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: .5em;
+    padding: .5rem;
 
     @media screen and (max-width: $sm) {
       border-bottom-left-radius: 0;
@@ -48,40 +37,63 @@
     flex-direction: column;
 
     &-header {
-      color: hsl(202, 57%, 15%);
-      font-size: 1.7em;
+      color: #102f40;
+      font-size: 1.7rem;
       font-weight: 800;
-      margin: 0.3em .5em;
-      padding: .1rem 0;
+      margin: .5rem .75rem;
+
+      @media (max-width: $sm) {
+        text-align: center;
+        padding: 0;
+        margin: .2rem .4rem;
+      }
     }
 
     &-img {
       width: 96px;
-      padding: .3em;
+      padding: .3rem;
+
+      @media (max-width: $sm) {
+        width: 64px;
+      }
     }
 
     &-description {
       min-height: 5vh;
-      margin: .8em;
+      margin: .9rem;
     }
 
     &-date {
       margin: 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       background: #f6f6f6;
-      padding: 1em;
+      padding: 1rem;
       bottom: 0;
 
+      @media (max-width: $sm) {
+        justify-content: center;
+        padding: .6rem;
+      }
+
       &-date-remain {
-        font-size: 0.7em;
-        color: hsl(201, 23%, 34%);
+        font-size: 0.7rem;
+        color: #435d6b;
         align-items: flex-start;
+
+        @media (max-width: $sm) {
+          margin-left: 1rem;
+        }
       }
     }
 
     &-range {
-      font-size: 1.1em;
+      font-size: 1.1rem;
+
+      @media (max-width: $sm) {
+        text-align: center;
+      }
     }
   }
 }
