@@ -3,16 +3,16 @@
   align-items: center;
   flex-direction: column;
   margin: 1rem;
+  text-decoration: none;
 
   &__name {
     color: $grey;
     font-size: 1.1rem;
-    text-decoration: none;
+  }
 
-    &:hover {
-      text-decoration: underline;
-      color: $black;
-    }
+  &:hover {
+    text-decoration: underline;
+    color: $black;
   }
 
   img {
@@ -22,7 +22,7 @@
 
     &:hover {
       transform: scale(1.1);
-      transition: .6s;
+      transition: .35s;
     }
   }
 }
