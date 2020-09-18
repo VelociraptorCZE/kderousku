@@ -7,6 +7,8 @@
 body {
   background: $white;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: #333;

@@ -1,21 +1,16 @@
-footer {
-  z-index: 2;
-  margin-top: 0;
-  bottom: 0;
-}
-
 .footer {
-  padding: 1em;
+  padding: 1rem;
+  margin-top: auto;
   background: $primary;
   color: #115a77;
   min-height: 10vh;
-  font-size: .9em;
+  font-size: .9rem;
 
   &__header {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     color: $white;
-    margin-bottom: .4em;
-    margin-top: .5em;
+    margin-bottom: .4rem;
+    margin-top: .5rem;
   }
 
   &__container {
@@ -28,7 +23,7 @@ footer {
   a {
     text-decoration: none;
     color: #c4d3ff;
-    line-height: 1.5em;
+    line-height: 1.5rem;
 
     &:hover {
       color: $white;
