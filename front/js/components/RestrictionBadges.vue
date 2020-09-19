@@ -11,7 +11,7 @@
 			</div>
 
 			<h2 v-if="!restrictionList[activeCategory].length">
-				{{ restrictionList.isLoading ? 'Načítám...' : 'Tady nic není' }}
+				{{ restrictionList.isLoading ? "Načítám..." : "Zde zatím nejsou žádná opatření" }}
 			</h2>
 		</div>
 
@@ -39,7 +39,7 @@
 					</div>
 				</div>
 
-				<details class="small-restriction-card" open v-else>
+				<details class="small-restriction-card" v-else>
 					<summary class="small-restriction-card__summary">
 						<div class="d-flex p-3">
 							<div class="small-restriction-card__left">
