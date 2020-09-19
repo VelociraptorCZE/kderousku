@@ -39,8 +39,17 @@ export default {
 
 	async beforeMount () {
 		const restrictionListResponse = await fetch("api/restriction-list");
+		const restrictionList = await restrictionListResponse.json();
 
-		this.restrictionList = await restrictionListResponse.json();
+		if (restrictionList.current.length) {
+			restrictionList.current.unshift({
+				image: "public/img/question.svg",
+				name: "Všechna opatření",
+				showAllRestrictions: true
+			});
+		}
+
+		this.restrictionList = restrictionList;
 	}
 }
 </script>

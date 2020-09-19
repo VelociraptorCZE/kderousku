@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<div class="restriction-badges" ref="badges">
-			<div :class="`${restrictionItem === activeItem ? 'active' : ''} restriction-badges__item`"
+			<div :class="`${activeItems.includes(restrictionItem) ? 'active' : ''} restriction-badges__item`"
 				 v-for="restrictionItem in restrictionList[activeCategory]"
-				 @click="activeItem = restrictionItem"
+				 @click="setActiveItems(restrictionItem)"
 			>
 				<img :src="restrictionItem.image" :alt="restrictionItem.name" class="m-2 restriction-badges__item--img">
 
@@ -15,49 +15,50 @@
 			</h2>
 		</div>
 
-		<article v-if="activeItem !== null">
-			<div class="restriction-card" ref="card">
-				<div class="restriction-card__left">
-					<img :src="activeItem.image" :alt="activeItem.name" class="restriction-card__right-img float-left">
-				</div>
-				<div class="restriction-card__right">
-					<div class="restriction-card__right-header">
-						{{ activeItem.name }}
+		<section ref="cards">
+			<article v-for="activeItem in activeItems" v-if="!activeItem.showAllRestrictions">
+				<div class="restriction-card" v-if="activeItems.length === 1">
+					<div class="restriction-card__left">
+						<img :src="activeItem.image" :alt="activeItem.name" class="restriction-card__right-img float-left">
 					</div>
-					<div class="restriction-card__right-date">
+					<div class="restriction-card__right">
+						<div class="restriction-card__right-header">
+							{{ activeItem.name }}
+						</div>
+						<div class="restriction-card__right-date">
 						<span class="restriction-card__right-range">
 							<span v-if="activeItem.start">{{ activeItem.start }} - </span> {{ activeItem.end }}
 						</span>
-						<span class="restriction-card__right-date-date-remain" v-if="activeItem.daysLeft">
+							<span class="restriction-card__right-date-date-remain" v-if="activeItem.daysLeft">
 							{{ activeItem.daysLeft }}
 						</span>
+						</div>
+						<div class="restriction-card__right-description">
+							{{ activeItem.info }}
+						</div>
 					</div>
-					<div class="restriction-card__right-description">
+				</div>
+
+				<details class="small-restriction-card" open v-else>
+					<summary class="small-restriction-card__summary">
+						<div class="d-flex p-3">
+							<div class="small-restriction-card__left">
+								<img :src="activeItem.image" :alt="activeItem.name">
+							</div>
+							<div class="small-restriction-card__right">
+								<div class="small-restriction-card__right--header">{{ activeItem.name }}</div>
+								<div class="small-restriction-card__right--date">
+									<span v-if="activeItem.start">{{ activeItem.start }} - </span> {{ activeItem.end }}
+								</div>
+							</div>
+						</div>
+					</summary>
+					<div class="small-restriction-card__content">
 						{{ activeItem.info }}
 					</div>
-				</div>
-			</div>
-
-			<!--
-		  <div>
-			<details class="small-restriction-card">
-			  <summary class="small-restriction-card__summary">
-				<div class="d-flex p-3">
-				  <div class="small-restriction-card__left">
-					<img :src="activeItem.image" :alt="activeItem.name">
-				  </div>
-				  <div class="small-restriction-card__right">
-					  <div class="small-restriction-card__right--header">{{ activeItem.name }}</div>
-					  <div class="small-restriction-card__right--date">{{ activeItem.start }} - {{ activeItem.end }}</div>
-				  </div>
-				</div>
-			  </summary>
-			  <div class="small-restriction-card__content">
-				  {{ activeItem.info }}
-			  </div>
-			</details>
-		  </div>SMALL CARD -->
-		</article>
+				</details>
+			</article>
+		</section>
 	</div>
 </template>
 
@@ -67,23 +68,26 @@ export default {
 
 	data () {
 		return {
-			activeItem: null,
+			activeItems: [],
 		}
 	},
 
-	updated () {
-		this.scrollToCard();
-	},
-
 	methods: {
-		scrollToCard () {
-			const { card } = this.$refs;
+		setActiveItems (restrictionItem) {
+			const { activeCategory, restrictionList } = this;
 
-			if (!card || this.getBadgeContainerHeight() < innerHeight / 1.25) {
+			this.activeItems = restrictionItem.showAllRestrictions ? restrictionList[activeCategory] : [restrictionItem];
+			this.scrollToCard();
+		},
+
+		scrollToCard () {
+			const { cards } = this.$refs;
+
+			if (!cards || this.getBadgeContainerHeight() < innerHeight / 1.25) {
 				return;
 			}
 
-			setTimeout(() => scroll(0, card.offsetTop - 96), 10);
+			setTimeout(() => scroll(0, cards.offsetTop - 96), 10);
 		},
 
 		getBadgeContainerHeight () {
