@@ -62,7 +62,7 @@ class AppExtension extends AbstractExtension
 
     public function imagePath(string $assetPath, bool $isCached = false): string
     {
-        return $this->getAssetPath($assetPath, 'images', $isCached);
+        return $this->getAssetPath($assetPath, 'img', $isCached);
     }
 
     public function isObject($object): bool

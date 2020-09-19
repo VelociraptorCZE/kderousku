@@ -25,7 +25,7 @@ class RestrictionRepository extends ServiceEntityRepository
         return $this
             ->createQueryBuilder('restriction')
             ->select('restriction.name, restriction.image, restriction.info, restriction.start, restriction.end')
-            ->andWhere('restriction.start <= CURRENT_DATE()')
+            ->andWhere('restriction.start <= CURRENT_DATE() or restriction.start is null')
             ->andWhere('restriction.end >= CURRENT_DATE() or restriction.end is null')
             ->getQuery()
             ->getArrayResult();

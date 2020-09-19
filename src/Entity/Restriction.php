@@ -33,12 +33,12 @@ class Restriction
     private $info;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $start;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="date", nullable=true)
      */
     private $end;
 

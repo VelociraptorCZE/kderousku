@@ -7,10 +7,6 @@
   overflow: hidden;
   border-radius: 12px;
 
-  @media (max-width: $md) {
-    margin: .6rem;
-  }
-
   &__left {
     flex-basis: 18%;
     background: #bbbdc1;
@@ -23,7 +19,7 @@
     align-items: center;
     padding: .5rem;
 
-    @media screen and (max-width: $sm) {
+    @media (max-width: $sm) {
       border-bottom-left-radius: 0;
       border-top-right-radius: 12px;
     }
@@ -45,7 +41,7 @@
       @media (max-width: $sm) {
         text-align: center;
         padding: 0;
-        margin: .2rem .4rem;
+        margin: 1rem;
       }
     }
 
@@ -94,6 +90,15 @@
       @media (max-width: $sm) {
         text-align: center;
       }
+    }
+  }
+
+  @media (max-width: $md) {
+    margin: .6rem;
+    flex-wrap: wrap;
+
+    &__left, &__right {
+      flex-basis: 100%;
     }
   }
 }
