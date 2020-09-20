@@ -9,6 +9,7 @@
         <script data-ad-client="ca-pub-6028445779139248" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81525037-2"></script>
         <script>
+            window.baseUrl = "{{ app.request.baseUrl }}";
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
@@ -24,7 +25,6 @@
         <link rel="stylesheet" href="{{ assetPath('css/app.css') }}">
         <meta name="description" content="Informace o všech opatřeních ⚠️, na kterých místech Vláda ČR nařizuje nošení roušek.">
         <script src="https://polyfill.io/v3/polyfill.min.js?features={{ polyfillObjects|join('%2C') }}"></script>
-        <script src="{{ assetPath('js/app.js') }}" async defer></script>
         <title>KdeRoušku.cz | {% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>

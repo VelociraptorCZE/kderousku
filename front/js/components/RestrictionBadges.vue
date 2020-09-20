@@ -5,7 +5,7 @@
 				 v-for="restrictionItem in restrictionList[activeCategory]"
 				 @click="setActiveItems(restrictionItem)"
 			>
-				<img :src="restrictionItem.image" :alt="restrictionItem.name" class="m-2 restriction-badges__item--img">
+				<img :src="imagePath(restrictionItem.image)" :alt="restrictionItem.name" class="m-2 restriction-badges__item--img">
 
 				<span class="restriction-badges__item--header">{{ restrictionItem.name }}</span>
 			</div>
@@ -19,7 +19,10 @@
 			<article v-for="activeItem in activeItems" v-if="!activeItem.showAllRestrictions">
 				<div class="restriction-card" v-if="activeItems.length === 1">
 					<div class="restriction-card__left">
-						<img :src="activeItem.image" :alt="activeItem.name" class="restriction-card__right-img float-left">
+						<img :src="imagePath(activeItem.image)"
+							 :alt="activeItem.name"
+							 class="restriction-card__right-img float-left"
+						>
 					</div>
 					<div class="restriction-card__right">
 						<div class="restriction-card__right-header">
@@ -43,7 +46,7 @@
 					<summary class="small-restriction-card__summary">
 						<div class="d-flex p-3">
 							<div class="small-restriction-card__left">
-								<img :src="activeItem.image" :alt="activeItem.name">
+								<img :src="imagePath(activeItem.image)" :alt="activeItem.name">
 							</div>
 							<div class="small-restriction-card__right">
 								<div class="small-restriction-card__right--header">{{ activeItem.name }}</div>
@@ -63,6 +66,8 @@
 </template>
 
 <script>
+import imagePath from "../utils/imagePath";
+
 export default {
 	props: ["restrictionList", "activeCategory"],
 
@@ -73,6 +78,10 @@ export default {
 	},
 
 	methods: {
+		imagePath (path) {
+			return imagePath(`/restrictions/${path}`);
+		},
+
 		setActiveItems (restrictionItem) {
 			const { activeCategory, restrictionList } = this;
 
