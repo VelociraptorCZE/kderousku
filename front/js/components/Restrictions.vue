@@ -43,7 +43,7 @@ export default {
 
 		if (restrictionList.current.length) {
 			restrictionList.current.unshift({
-				image: "public/img/question.svg",
+				image: "public/img/restrictions/question.svg",
 				name: "Všechna opatření",
 				showAllRestrictions: true
 			});
