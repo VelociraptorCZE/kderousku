@@ -1,0 +1,22 @@
+{
+  "short_name": "KdeRoušku",
+  "name": "KdeRoušku.cz | Opatření",
+  "description": "Přehled všech aktuálních opatření, které platí v České republice",
+  "icons": [
+    {
+      "src": "public/img/pwa/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/public/img/pwa/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0E84FD",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#0E84FD"
+}
