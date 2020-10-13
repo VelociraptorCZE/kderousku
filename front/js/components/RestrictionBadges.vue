@@ -15,7 +15,7 @@
 			</h2>
 		</div>
 
-		<section ref="cards">
+		<div ref="cards">
 			<article v-for="activeItem in activeItems" v-if="!activeItem.showAllRestrictions">
 				<div class="restriction-card" v-if="activeItems.length === 1">
 					<div class="restriction-card__left">
@@ -61,7 +61,7 @@
 					</div>
 				</details>
 			</article>
-		</section>
+		</div>
 	</div>
 </template>
 
