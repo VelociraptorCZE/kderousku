@@ -27,6 +27,7 @@ class RestrictionRepository extends ServiceEntityRepository
             ->select('restriction.name, restriction.image, restriction.info, restriction.start, restriction.end')
             ->andWhere('restriction.start <= CURRENT_DATE() or restriction.start is null')
             ->andWhere('restriction.end >= CURRENT_DATE() or restriction.end is null')
+            ->andWhere('restriction.region is null')
             ->getQuery()
             ->getArrayResult();
     }
@@ -37,6 +38,7 @@ class RestrictionRepository extends ServiceEntityRepository
             ->createQueryBuilder('restriction')
             ->select('restriction.name, restriction.image, restriction.info, restriction.start, restriction.end')
             ->andWhere('restriction.start > CURRENT_DATE()')
+            ->andWhere('restriction.region is null')
             ->getQuery()
             ->getArrayResult();
     }

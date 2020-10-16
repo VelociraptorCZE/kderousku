@@ -33,4 +33,12 @@ class RestrictionListApiController extends AbstractController
             'upcoming' => $this->restrictionTransformer->transform($this->restrictionRepository->findUpcomingRestrictions())
         ]);
     }
+
+    /**
+     * @Route("/api/restriction-list-by-regions", name="restriction_list_by_regions")
+     */
+    public function restrictionListByRegions(): Response
+    {
+        return new JsonResponse();
+    }
 }

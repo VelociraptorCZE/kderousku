@@ -42,6 +42,11 @@ class Restriction
      */
     private $end;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Region::class, inversedBy="restrictions")
+     */
+    private $region;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Restriction
     public function setEnd(?\DateTimeInterface $end): self
     {
         $this->end = $end;
+
+        return $this;
+    }
+
+    public function getRegion(): ?Region
+    {
+        return $this->region;
+    }
+
+    public function setRegion(?Region $region): self
+    {
+        $this->region = $region;
 
         return $this;
     }
