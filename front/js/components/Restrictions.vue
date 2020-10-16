@@ -38,7 +38,7 @@ export default {
 	},
 
 	async beforeMount () {
-		const restrictionListResponse = await fetch("api/restriction-list");
+		const restrictionListResponse = await fetch("api/v1/restriction-list");
 		const restrictionList = await restrictionListResponse.json();
 
 		if (restrictionList.current.length) {
