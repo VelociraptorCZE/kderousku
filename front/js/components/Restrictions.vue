@@ -16,6 +16,7 @@
 <script>
 import regeneratorRuntime from "regenerator-runtime";
 import RestrictionBadges from "./RestrictionBadges.vue";
+import fetchDataFromApi, { RESTRICTION_LIST } from "../utils/fetchDataFromApi";
 
 export default {
 	components: {
@@ -38,8 +39,7 @@ export default {
 	},
 
 	async beforeMount () {
-		const restrictionListResponse = await fetch("api/restriction-list");
-		const restrictionList = await restrictionListResponse.json();
+		const restrictionList = await fetchDataFromApi(RESTRICTION_LIST);
 
 		if (restrictionList.current.length) {
 			restrictionList.current.unshift({

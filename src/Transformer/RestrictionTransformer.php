@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Transformer;
 
+use App\Entity\Restriction;
 use DateTime;
 
 class RestrictionTransformer
@@ -11,17 +12,24 @@ class RestrictionTransformer
     {
         $now = new DateTime;
 
-        return array_map(function (array $restriction) use ($now): array {
-            ['start' => $start, 'end' => $end] = $restriction;
+        return array_map(function (Restriction $restriction) use ($now): array {
+            $transformedRestriction = [
+                'name' => $restriction->getName(),
+                'image' => $restriction->getImage(),
+                'info' => $restriction->getInfo()
+            ];
 
-            $restriction['start'] = $start instanceof DateTime ? $start->format('j. n. Y') : '';
-            $restriction['end'] = $end instanceof DateTime ? $end->format('j. n. Y') : 'do odvolání';
+            $start = $restriction->getStart();
+            $end = $restriction->getEnd();
+
+            $transformedRestriction['start'] = $start instanceof DateTime ? $start->format('j. n. Y') : '';
+            $transformedRestriction['end'] = $end instanceof DateTime ? $end->format('j. n. Y') : 'do odvolání';
 
             if ($start > $now) {
-                $restriction['daysLeft'] = "Opatření začne platit za {$start->diff($now)->days} dnů";
+                $transformedRestriction['daysLeft'] = "Opatření začne platit za {$start->diff($now)->days} dnů";
             }
 
-            return $restriction;
+            return $transformedRestriction;
         }, $restrictionList);
     }
 }
