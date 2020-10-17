@@ -10,15 +10,17 @@
 			</select>
 		</div>
 
-		<div v-if="restrictionList[activeRegion] && !restrictionList[activeRegion].length">
-			<h3 class="tc">V tomto kraji nevíme o žádném nařízení</h3>
-		</div>
+		<div v-if="restrictionList[activeRegion]">
+			<div v-if="!restrictionList[activeRegion].length">
+				<h3 class="tc">V tomto kraji nevíme o žádném nařízení</h3>
+			</div>
 
-		<div class="restriction-card p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
-			<div>
-				<h3 class="mt-0">{{ restriction.name }}</h3>
+			<div class="restriction-card p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
+				<div>
+					<h3 class="mt-0">{{ restriction.name }}</h3>
 
-				{{ restriction.info }}
+					{{ restriction.info }}
+				</div>
 			</div>
 		</div>
 	</div>
