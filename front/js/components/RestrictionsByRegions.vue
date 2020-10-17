@@ -4,7 +4,7 @@
 			<h2>Kraj</h2>
 
 			<select @input="activeRegion = $event.target.value" class="m-3">
-				<option :value="regionName" v-for="(_, regionName) in restrictionList">
+				<option :value="regionName" v-for="regionName in Object.keys(restrictionList)">
 					{{ regionName }}
 				</option>
 			</select>
