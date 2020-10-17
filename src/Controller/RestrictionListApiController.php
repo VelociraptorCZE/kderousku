@@ -44,7 +44,7 @@ class RestrictionListApiController extends AbstractController
     public function restrictionListByRegions(): Response
     {
         $transformedRegions = [];
-        $regions = $this->regionRepository->findAll();
+        $regions = $this->regionRepository->findBy([], ['name' => 'asc']);
 
         foreach ($regions as $region) {
             $transformedRegions[$region->getName()] = $this->restrictionTransformer->transform($region->getRestrictions()->toArray());
