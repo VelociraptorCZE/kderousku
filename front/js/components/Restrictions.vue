@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<section>
 		<div class="dynamic-tabs font-heading">
 			<div :class="`dynamic-tabs__item ${categoryName === activeCategory ? 'active' : ''}`"
 				 @click="activeCategory = categoryName"
@@ -10,7 +10,7 @@
 		</div>
 
 		<RestrictionBadges :active-category="activeCategory" :restriction-list="restrictionList" />
-	</div>
+	</section>
 </template>
 
 <script>

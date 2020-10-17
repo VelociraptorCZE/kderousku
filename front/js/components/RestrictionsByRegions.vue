@@ -1,5 +1,5 @@
 <template>
-	<div v-if="!restrictionList.isLoading">
+	<section v-if="!restrictionList.isLoading">
 		<div class="d-flex jcc p-4">
 			<h2>Kraj</h2>
 
@@ -10,20 +10,20 @@
 			</select>
 		</div>
 
-		<div v-if="restrictionList[activeRegion]">
+		<article v-if="restrictionList[activeRegion]">
 			<div v-if="!restrictionList[activeRegion].length">
 				<h3 class="tc">V tomto kraji nevíme o žádném nařízení</h3>
 			</div>
 
-			<div class="restriction-card p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
+			<article class="restriction-card p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
 				<div>
 					<h3 class="mt-0">{{ restriction.name }}</h3>
 
 					{{ restriction.info }}
 				</div>
-			</div>
-		</div>
-	</div>
+			</article>
+		</article>
+	</section>
 </template>
 
 <script>
