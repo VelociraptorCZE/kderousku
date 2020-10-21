@@ -22,3 +22,17 @@
   max-width: 1240px;
   margin: 0 auto;
 }
+
+.container-regions {
+  background: whitesmoke;
+  box-shadow: 0 0 5px #e3e3e3;
+  max-width: 768px;
+  margin: 1rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

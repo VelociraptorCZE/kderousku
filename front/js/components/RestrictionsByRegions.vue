@@ -20,12 +20,18 @@
 				<h3 class="tc">V tomto kraji nevíme o žádném nařízení</h3>
 			</div>
 
-			<article class="restriction-card p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
+			<article class="container-regions p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
 				<div>
-					<h3 class="mt-0">{{ restriction.name }}</h3>
-
-					{{ restriction.info }}
-				</div>
+          <h3 class="mt-0 tc h3">Stredocesky</h3>
+        </div>
+        <div class="container-regions__cards">
+          <div class="region-card--body">
+            <div class="region-card--title">test</div>
+            <div class="region-card--content">
+              {{ restriction.info }}
+            </div>
+          </div>
+        </div>
 			</article>
 		</article>
 	</section>
