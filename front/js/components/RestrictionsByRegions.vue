@@ -26,7 +26,9 @@
         </div>
         <div class="container-regions__cards">
           <div class="region-card--body">
-            <div class="region-card--title">test</div>
+            <div class="region-card--title">
+              {{ restriction.name }}
+            </div>
             <div class="region-card--content">
               {{ restriction.info }}
             </div>
