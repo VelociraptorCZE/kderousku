@@ -17,7 +17,7 @@
 
 		<article v-if="restrictionList[activeRegion]">
 			<div v-if="!restrictionList[activeRegion].length">
-				<h3 class="tc">V tomto kraji nevíme o žádném nařízení</h3>
+				<h3 class="tc">V tomto kraji nevíme o žádném zvláštních opatřeních</h3>
 			</div>
 
 			<article class="container-regions p-4" v-else>
