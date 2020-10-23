@@ -3,13 +3,20 @@
     border: 2px solid #f7c738;
     min-height: 10vh;
     border-radius: 7px;
-    flex-basis: 33.333333%;
+    margin: 1rem;
+    flex: 0 0 calc(33% - 2.1rem);
+
+    @media (max-width: $md) {
+      flex: initial;
+    }
   }
 
   &--title {
     background: #f7c738;
     text-align: center;
     color: #3e3e3e;
+    font-size: 1.1rem;
+    font-weight: 700;
     padding: .7rem;
   }
 
