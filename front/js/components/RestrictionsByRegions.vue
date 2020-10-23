@@ -1,13 +1,18 @@
 <template>
 	<section v-if="!restrictionList.isLoading">
-		<div class="d-flex jcc p-4">
+		<div class="d-flex jcc aic p-4">
 			<h2>Kraj</h2>
 
-			<select @input="activeRegion = $event.target.value" class="m-3">
-				<option :value="regionName" v-for="regionName in Object.keys(restrictionList)">
-					{{ regionName }}
-				</option>
-			</select>
+			<div>
+				<label>
+					<select @input="activeRegion = $event.target.value" class="m-3 select">
+						<option :value="regionName" v-for="regionName in Object.keys(restrictionList)">
+							{{ regionName }}
+						</option>
+					</select>
+					<span class="focus"></span>
+				</label>
+			</div>
 		</div>
 
 		<article v-if="restrictionList[activeRegion]">
@@ -15,11 +20,16 @@
 				<h3 class="tc">V tomto kraji nevíme o žádném nařízení</h3>
 			</div>
 
-			<article class="restriction-card p-4" v-for="restriction in restrictionList[activeRegion]" v-else>
-				<div>
-					<h3 class="mt-0">{{ restriction.name }}</h3>
-
-					{{ restriction.info }}
+			<article class="container-regions p-4" v-else>
+				<div class="container-regions__cards">
+					<div class="region-card--body" v-for="restriction in restrictionList[activeRegion]">
+						<div class="region-card--title">
+							{{ restriction.name }}
+						</div>
+						<div class="region-card--content">
+							{{ restriction.info }}
+						</div>
+					</div>
 				</div>
 			</article>
 		</article>

@@ -1,0 +1,28 @@
+.region-card {
+  &--body {
+    border: 2px solid #f7c738;
+    min-height: 10vh;
+    border-radius: 7px;
+    margin: 1rem;
+    flex: 0 0 calc(33% - 2.1rem);
+
+    @media (max-width: $md) {
+      flex: initial;
+    }
+  }
+
+  &--title {
+    background: #f7c738;
+    text-align: center;
+    color: #3e3e3e;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: .7rem;
+  }
+
+  &--content {
+    background: #f8f8f8;
+    padding: .6rem;
+    color: #1a1a1a;
+  }
+}

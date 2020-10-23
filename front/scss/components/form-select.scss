@@ -1,0 +1,26 @@
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  font-size: 1.1em;
+  padding: .2em .6em;
+  outline: 0;
+  line-height: 3;
+  background: #ececec;
+  width: fit-content;
+  border: 0;
+  box-shadow: 0 0 4px #929292;
+  border-radius: .25em;
+}
+
+.select::after {
+  content: '\25BC';
+  cursor:pointer;
+  pointer-events:none;
+  transition:.35s all ease;
+}
+
+.select:hover::after {
+  color: $primary;
+}
